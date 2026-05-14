@@ -1,0 +1,61 @@
+---
+interface Props {
+  categories: string[];
+}
+const { categories } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-2" data-filter-root>
+  <button type="button" class="chip is-active" data-filter="*">
+    全部
+    <span class="text-xs text-[var(--color-subtle)]" data-count="*"></span>
+  </button>
+  {
+    categories.map((c) => (
+      <button type="button" class="chip" data-filter={c}>
+        {c}
+        <span class="text-xs text-[var(--color-subtle)]" data-count={c} />
+      </button>
+    ))
+  }
+</div>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const root = document.querySelector("[data-filter-root]");
+    const grid = document.querySelector("[data-works-grid]");
+    if (!root || !grid) return;
+
+    const cards = Array.from(grid.querySelectorAll("[data-categories]"));
+
+    const counts = {};
+    cards.forEach((card) => {
+      (card.dataset.categories || "")
+        .split("|")
+        .filter(Boolean)
+        .forEach((c) => {
+          counts[c] = (counts[c] || 0) + 1;
+        });
+    });
+    counts["*"] = cards.length;
+
+    root.querySelectorAll("[data-count]").forEach((el) => {
+      const key = el.getAttribute("data-count");
+      el.textContent = counts[key] ? `(${counts[key]})` : "";
+    });
+
+    root.addEventListener("click", (event) => {
+      const target = event.target.closest("[data-filter]");
+      if (!target) return;
+      const value = target.getAttribute("data-filter");
+      root
+        .querySelectorAll("[data-filter]")
+        .forEach((b) => b.classList.toggle("is-active", b === target));
+      cards.forEach((card) => {
+        const cats = (card.dataset.categories || "").split("|");
+        const match = value === "*" || cats.includes(value);
+        card.style.display = match ? "" : "none";
+      });
+    });
+  });
+</script>

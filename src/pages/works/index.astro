@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import WorkCard from "../../components/WorkCard.astro";
+import FilterChips from "../../components/FilterChips.astro";
+import { getCollection } from "astro:content";
+
+const works = (await getCollection("works")).sort(
+  (a, b) => (a.data.order ?? 99) - (b.data.order ?? 99),
+);
+
+const categories = Array.from(
+  new Set(works.flatMap((w) => w.data.category)),
+).sort();
+---
+
+<BaseLayout title="作品集 | 陳彥竹">
+  <section class="mx-auto max-w-6xl px-5 pt-16 pb-12 sm:px-8 sm:pt-24">
+    <span class="eyebrow">All works</span>
+    <h1 class="h-display mt-4">作品集</h1>
+    <p class="mt-6 max-w-2xl text-[var(--color-muted)]">
+      點開任一案例可以看到完整背景、執行策略與 KPI 數字。所有 KPI 皆來自實際執行結果或可核對的後台截圖。
+    </p>
+
+    <div class="mt-10">
+      <FilterChips categories={categories} />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 pb-24 sm:px-8">
+    <div
+      class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+      data-works-grid
+    >
+      {
+        works.map((w) => (
+          <div data-categories={w.data.category.join("|")}>
+            <WorkCard entry={w} />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

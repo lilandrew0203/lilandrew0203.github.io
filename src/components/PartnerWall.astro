@@ -1,0 +1,40 @@
+---
+import partners from "../data/partners.json";
+
+interface Props {
+  title?: string;
+  eyebrow?: string;
+}
+
+const { title = "合作品牌", eyebrow = "Brands & partners" } = Astro.props;
+---
+
+<section class="mx-auto max-w-6xl px-5 py-20 sm:px-8">
+  <div class="flex items-end justify-between gap-6">
+    <div>
+      <span class="eyebrow">{eyebrow}</span>
+      <h2 class="h-section mt-3">{title}</h2>
+    </div>
+    <p class="hidden max-w-xs text-sm text-[var(--color-muted)] md:block">
+      與品牌、媒體、KOL 共同打造行銷案，累計觸及人數突破千萬。
+    </p>
+  </div>
+
+  <div
+    class="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-[var(--color-line)] bg-[var(--color-line)] sm:grid-cols-3 md:grid-cols-5"
+  >
+    {
+      partners.map((p) => (
+        <div class="flex aspect-[5/3] items-center justify-center bg-[var(--color-surface)] p-5 transition-colors hover:bg-[var(--color-surface-2)]">
+          {p.logo ? (
+            <img src={p.logo} alt={p.name} class="partner-logo max-h-10" />
+          ) : (
+            <span class="partner-logo text-sm font-semibold tracking-wider text-[var(--color-fg)]">
+              {p.name}
+            </span>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,34 @@
+---
+interface Props {
+  label: string;
+  value: string;
+  growth?: string;
+  emphasis?: boolean;
+}
+
+const { label, value, growth, emphasis = false } = Astro.props;
+---
+
+<div
+  class={`kpi-card group reveal rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)] p-6 transition-colors hover:border-[var(--color-accent)] ${
+    emphasis ? "md:p-8" : ""
+  }`}
+>
+  <div class="flex items-baseline justify-between">
+    <span
+      class="text-[10px] uppercase tracking-[0.3em] text-[var(--color-subtle)]"
+      >{label}</span
+    >
+    {
+      growth && (
+        <span
+          class="rounded-full px-2.5 py-1 text-xs font-medium"
+          style="background: var(--color-accent-soft); color: var(--color-accent);"
+        >
+          {growth}
+        </span>
+      )
+    }
+  </div>
+  <div class="kpi-num mt-3" data-countup={value}>{value}</div>
+</div>

@@ -1,0 +1,43 @@
+[
+  {
+    "group": "策略 / Strategy",
+    "items": [
+      "品牌定位",
+      "市場與競品分析",
+      "TA 洞察與消費者旅程",
+      "整合行銷企劃 (IMC)",
+      "年度行銷預算規劃"
+    ]
+  },
+  {
+    "group": "執行 / Execution",
+    "items": [
+      "社群經營（IG / FB / Threads）",
+      "KOL / KOC 媒合與議價",
+      "活動策劃與場控",
+      "新聞稿與媒體公關",
+      "短影音腳本企劃"
+    ]
+  },
+  {
+    "group": "數據 / Data",
+    "items": [
+      "GA4 與成效歸因",
+      "Meta Ads / Google Ads",
+      "Looker Studio 報表設計",
+      "A/B 測試",
+      "Notion 自動化工作流"
+    ]
+  },
+  {
+    "group": "工具 / Tools",
+    "items": [
+      "Notion",
+      "Figma",
+      "Canva",
+      "Slack",
+      "Adobe Premiere",
+      "ChatGPT / Claude"
+    ]
+  }
+]

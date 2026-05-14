@@ -1,0 +1,87 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  entry: CollectionEntry<"works">;
+  size?: "default" | "large";
+}
+
+const { entry, size = "default" } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const data = entry.data;
+const slug = entry.id.replace(/\.md$/, "");
+const href = `${base}/works/${slug}`;
+
+const primaryKpi = data.kpis?.[0];
+---
+
+<a href={href} class={`work-card reveal ${size === "large" ? "" : ""}`}>
+  <div class="work-card__cover">
+    {
+      data.coverImage ? (
+        <img src={data.coverImage} alt={`${data.title} cover`} loading="lazy" />
+      ) : (
+        <div class="work-card__cover-fallback">{data.client.toUpperCase()}</div>
+      )
+    }
+    <div
+      class="pointer-events-none absolute inset-0"
+      style="background: linear-gradient(180deg, rgba(15,15,15,0) 50%, rgba(15,15,15,0.85) 100%);"
+    >
+    </div>
+    <div class="absolute bottom-3 left-3 right-3 flex flex-wrap gap-1.5">
+      {
+        data.category.slice(0, 3).map((c) => (
+          <span class="chip" style="background: rgba(15,15,15,0.6); border-color: rgba(255,255,255,0.18); color: #fff;">
+            {c}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="p-5">
+    <div
+      class="flex items-center justify-between text-xs text-[var(--color-muted)]"
+    >
+      <span>{data.client}</span>
+      <span>{data.period}</span>
+    </div>
+    <h3 class="mt-2 text-xl font-semibold text-[var(--color-fg)]">
+      {data.title}
+    </h3>
+    {
+      data.summary && (
+        <p class="mt-2 line-clamp-2 text-sm text-[var(--color-muted)]">
+          {data.summary}
+        </p>
+      )
+    }
+
+    {
+      primaryKpi && (
+        <div class="mt-5 flex items-end justify-between border-t border-[var(--color-line)] pt-4">
+          <div>
+            <div class="text-[10px] uppercase tracking-[0.3em] text-[var(--color-subtle)]">
+              {primaryKpi.label}
+            </div>
+            <div
+              class="mt-1 font-bold leading-none"
+              style="font-size: clamp(1.5rem, 3vw, 2rem); color: var(--color-accent);"
+            >
+              {primaryKpi.value}
+            </div>
+          </div>
+          {primaryKpi.growth && (
+            <span
+              class="rounded-full px-2.5 py-1 text-xs font-medium"
+              style="background: var(--color-accent-soft); color: var(--color-accent);"
+            >
+              {primaryKpi.growth}
+            </span>
+          )}
+        </div>
+      )
+    }
+  </div>
+</a>

@@ -1,0 +1,20 @@
+{
+  "name": "陳彥竹",
+  "nameEn": "Andrew Chen",
+  "role": "行銷企劃 / Brand & Growth Planner",
+  "tagline": "用數據找答案、用故事造聲量，讓品牌在對的時刻、被對的人看見。",
+  "location": "Taipei, Taiwan",
+  "email": "hello@example.com",
+  "available": true,
+  "availabilityNote": "目前開放 freelance、品牌策略顧問與整合行銷案件",
+  "stats": [
+    { "label": "年資", "value": "4+", "suffix": "yrs" },
+    { "label": "操盤案例", "value": "12+" },
+    { "label": "累積觸及", "value": "1500", "suffix": "萬+" }
+  ],
+  "social": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/" },
+    { "label": "Instagram", "url": "https://www.instagram.com/" },
+    { "label": "GitHub", "url": "https://github.com/" }
+  ]
+}

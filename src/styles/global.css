@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+/* ---------- 自訂主題（Tailwind v4 token） ---------- */
+@theme {
+  --color-bg: #0f0f0f;
+  --color-surface: #161616;
+  --color-surface-2: #1c1c1c;
+  --color-line: #2a2a2a;
+  --color-fg: #f4f4f4;
+  --color-muted: #9a9a9a;
+  --color-subtle: #6a6a6a;
+  --color-accent: #e8ff4d;
+  --color-accent-soft: rgba(232, 255, 77, 0.12);
+
+  --font-sans: "Inter", "Noto Sans TC", system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  --font-tc: "Noto Sans TC", "Inter", system-ui, sans-serif;
+}
+
+/* ---------- Base ---------- */
+html {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  min-height: 100dvh;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #0f0f0f;
+}
+
+/* ---------- Typography helpers ---------- */
+.h-display {
+  font-family: var(--font-tc);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+}
+.h-section {
+  font-family: var(--font-tc);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  line-height: 1.15;
+}
+.kpi-num {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  color: var(--color-accent);
+}
+
+/* ---------- Tag / chip ---------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--color-line);
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  background: var(--color-surface);
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.chip.is-active {
+  color: #0f0f0f;
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.chip:hover:not(.is-active) {
+  color: var(--color-fg);
+  border-color: var(--color-fg);
+}
+
+/* ---------- Work card hover ---------- */
+.work-card {
+  position: relative;
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.work-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-accent);
+  box-shadow: 0 30px 60px -30px rgba(232, 255, 77, 0.25);
+}
+.work-card__cover {
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, #1d1d1d, #0f0f0f);
+  position: relative;
+  overflow: hidden;
+}
+.work-card__cover-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--color-subtle);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+}
+.work-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.work-card:hover .work-card__cover img {
+  transform: scale(1.04);
+}
+
+/* ---------- Partner logo wall (greyscale → color on hover) ---------- */
+.partner-logo {
+  filter: grayscale(1) brightness(0.85);
+  opacity: 0.65;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.partner-logo:hover {
+  filter: grayscale(0) brightness(1);
+  opacity: 1;
+}
+
+/* ---------- Hero fade-up entrance ---------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+.fade-up-1 { animation-delay: 0.05s; }
+.fade-up-2 { animation-delay: 0.25s; }
+.fade-up-3 { animation-delay: 0.45s; }
+.fade-up-4 { animation-delay: 0.65s; }
+
+/* ---------- Scroll-driven reveal (native CSS) ---------- */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
+}
+/* Fallback：不支援 scroll-driven 的瀏覽器直接顯示 */
+@supports not (animation-timeline: view()) {
+  .reveal { opacity: 1; }
+}
+
+/* ---------- Accent underline used by section eyebrow ---------- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+.eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: var(--color-accent);
+  color: #0f0f0f;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--color-fg);
+  border-color: var(--color-line);
+}
+.btn-ghost:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* ---------- Footer / nav helpers ---------- */
+.nav-link {
+  color: var(--color-muted);
+  transition: color 0.2s ease;
+  font-size: 0.95rem;
+}
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+  color: var(--color-fg);
+}
+.nav-link[aria-current="page"]::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--color-accent);
+  margin-top: 4px;
+  border-radius: 2px;
+}
+
+/* ---------- Bento grid utility ---------- */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+}
+.bento > .b-1 { grid-column: span 6; }
+.bento > .b-2 { grid-column: span 3; }
+.bento > .b-3 { grid-column: span 2; }
+@media (min-width: 768px) {
+  .bento { gap: 1.25rem; }
+}

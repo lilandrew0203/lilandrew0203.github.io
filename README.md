@@ -1,21 +1,64 @@
-# 行銷策劃個人作品集
+# Marketing Portfolio · Astro 5 + Tailwind v4
 
-我是一名具有深厚行業知識和豐富實戰經驗的行銷策劃，專注於運用多元化的行銷策略和創新活動來提升品牌影響力與市場占有率。
+A dark, content-driven marketing planner portfolio. Markdown + JSON for content, native CSS scroll animations, Bento-style KPI grid, deployable to GitHub Pages.
 
-## 關於我
+## Stack
 
-在行銷領域，我始終追求創新和效果。我的專長涵蓋了跨平台增長策略、創意活動策劃以及品牌建設，致力於通過精準的市場分析和創意的策略實施，達到業務增長和品牌價值的最大化。
+- **Astro 5** (`output: "static"`)
+- **Tailwind CSS v4** (via `@tailwindcss/vite`)
+- **TypeScript** (Astro strict)
+- **Google Fonts**: Inter + Noto Sans TC
+- Native CSS `animation-timeline: view()` for scroll reveal (with graceful fallback)
+- One JS file (`src/scripts/countup.ts`) for KPI count-up animation
 
-## 專案展示
+## 🚀 Just cloned this? → Read [`SETUP.md`](./SETUP.md) first
 
-在這個部分，我將展示我在品牌提升、社群管理、廣告策略及市場滲透等方面的成功案例。每個案例都詳細記錄了我從計畫、實施到評估的全過程，反映了我的專業技能和對行銷效果的深刻理解。
+它會帶你從「Node 怎麼裝」一路到「上線到 GitHub Pages」。
 
-### 品牌提升案例
+## Quick start（已熟悉的話）
 
-- **案例1**：利用創新社群活動提升品牌知名度。
-- **案例2**：透過精準廣告投放，增強品牌市場占有率。
+```bash
+nvm use         # 切到 Node 22（讀 .nvmrc）
+npm install
+npm run dev     # http://localhost:4321
+npm run build   # 全量檢查 + 輸出 dist/
+npm run preview
+```
 
-### 社群管理策略
+需要的環境：**Node 20 或 22**、npm ≥ 10、Git、GitHub 帳號。
 
-- **策略1**：建立和維護積極的社群互動，提高用戶參與度。
-- **策略2**：運用數據分析優化內容策略，提升社群活躍度。
+## Project layout
+
+```
+.
+├── astro.config.ts
+├── public/
+│   ├── favicon.svg
+│   └── images/                  # works / partners 圖檔放這裡
+├── src/
+│   ├── components/              # Header / Footer / WorkCard / KpiCard / PartnerWall / FilterChips
+│   ├── content/works/*.md       # 作品案例（content collection）
+│   ├── content.config.ts        # collection schema
+│   ├── data/                    # profile / experience / skills / partners JSON
+│   ├── layouts/BaseLayout.astro
+│   ├── pages/                   # / · /works · /works/[slug] · /about · /contact
+│   ├── scripts/countup.ts
+│   └── styles/global.css        # 主題 token、字型、動畫、components helpers
+├── .github/workflows/deploy.yml # GitHub Pages 自動部署
+└── CONTENT_GUIDE.md             # ⭐ 編輯內容請看這份
+```
+
+## Editing content
+
+- 個人資料：`src/data/*.json`
+- 作品：`src/content/works/<slug>.md`（用 frontmatter 帶 KPI、category、tools 等）
+- 首頁精選 = 任意 3 個 `featured: true` 的作品，由 `order` 決定排序
+
+## Docs
+
+| 文件 | 給誰看 / 什麼時候看 |
+|---|---|
+| [`SETUP.md`](./SETUP.md) | **新人接手** — 從 clone 到上線一條龍，含 personalize checklist |
+| [`CONTENT_GUIDE.md`](./CONTENT_GUIDE.md) | 人類編輯者 — 每個 JSON / frontmatter 欄位的完整規則 |
+| [`DEPLOY.md`](./DEPLOY.md) | 部署到 GitHub Pages 的逐步指南（含 custom domain） |
+| [`AGENTS.md`](./AGENTS.md) | **AI agent**（Antigravity / Cursor / Claude Code / Codex）— 工作守則、檔案地圖、可做 / 不可做 |
