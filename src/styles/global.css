@@ -9,8 +9,8 @@
   --color-fg: #f4f4f4;
   --color-muted: #9a9a9a;
   --color-subtle: #6a6a6a;
-  --color-accent: #e8ff4d;
-  --color-accent-soft: rgba(232, 255, 77, 0.12);
+  --color-accent: rgb(253, 156, 9);
+  --color-accent-soft: rgba(253, 156, 9, 0.12);
 
   --font-sans: "Inter", "Noto Sans TC", system-ui, -apple-system,
     "Segoe UI", Roboto, sans-serif;
