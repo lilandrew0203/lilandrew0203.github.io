@@ -1,12 +1,12 @@
 ---
 title: "宇宙比屌大賽：把產品變成年度社群事件"
 client: "DP TOYS"
-category: ["品牌活動", "社群經營", "整合行銷"]
+category: ["社群經營", "整合行銷"]
 period: "2023.10 – 2023.12"
 role: "策略規劃、活動企劃、社群操盤"
 featured: true
-order: 2
-coverImage: ""
+order: 1
+coverImage: "/images/works/cosmic-contest/cover.jpg"
 summary: "用一年一次的儀式感把產品轉成社群事件，創造 #宇宙比屌大賽 自發討論超過 1.2 萬則。"
 kpis:
   - label: "活動報名"

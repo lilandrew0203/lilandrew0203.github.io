@@ -4,16 +4,17 @@ import profile from "../data/profile.json";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const path = Astro.url.pathname.replace(/\/$/, "") || "/";
 
-const nav = [
-  { href: "/", label: "首頁" },
+const tabs = [
+  { href: "/", label: "簡歷" },
   { href: "/works", label: "作品集" },
-  { href: "/about", label: "關於" },
-  { href: "/contact", label: "聯絡" },
 ];
 
 function isActive(href: string) {
-  if (href === "/") return path === "/" || path === base;
-  return path === `${base}${href}` || path.startsWith(`${base}${href}/`);
+  const target = href === "/" ? base || "/" : `${base}${href}`;
+  if (href === "/") {
+    return path === "/" || path === base || path === "";
+  }
+  return path === target || path.startsWith(`${target}/`);
 }
 ---
 
@@ -22,12 +23,12 @@ function isActive(href: string) {
   style="background: color-mix(in srgb, var(--color-bg) 80%, transparent);"
 >
   <nav
-    class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8"
+    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-8"
   >
     <a
       href={`${base}/`}
       class="flex items-center gap-2 font-bold tracking-tight"
-      aria-label="返回首頁"
+      aria-label="返回簡歷"
     >
       <span
         class="inline-block h-2.5 w-2.5 rounded-full"
@@ -39,90 +40,31 @@ function isActive(href: string) {
       >
     </a>
 
-    <button
-      type="button"
-      id="menu-toggle"
-      class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-line)] text-[var(--color-fg)]"
-      aria-controls="primary-nav"
-      aria-expanded="false"
-      aria-label="開啟選單"
-    >
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        ><line x1="3" y1="6" x2="21" y2="6"></line><line
-          x1="3"
-          y1="12"
-          x2="21"
-          y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg
-      >
-    </button>
-
-    <ul
-      id="primary-nav"
-      class="hidden items-center gap-7 md:flex"
+    <div
+      class="inline-flex items-center gap-1 rounded-full border border-[var(--color-line)] bg-[var(--color-surface)] p-1"
+      role="tablist"
+      aria-label="頁面切換"
     >
       {
-        nav.map((item) => (
-          <li>
+        tabs.map((tab) => {
+          const active = isActive(tab.href);
+          return (
             <a
-              href={`${base}${item.href}`}
-              class="nav-link"
-              aria-current={isActive(item.href) ? "page" : undefined}
+              href={`${base}${tab.href}`}
+              role="tab"
+              aria-selected={active}
+              class:list={[
+                "rounded-full px-4 py-1.5 text-sm font-medium transition-colors",
+                active
+                  ? "bg-[var(--color-accent)] text-black"
+                  : "text-[var(--color-muted)] hover:text-[var(--color-fg)]",
+              ]}
             >
-              {item.label}
+              {tab.label}
             </a>
-          </li>
-        ))
+          );
+        })
       }
-      <li>
-        <a href={`${base}/contact`} class="btn btn-primary text-sm">
-          合作邀約 →
-        </a>
-      </li>
-    </ul>
+    </div>
   </nav>
-
-  <div
-    id="mobile-nav"
-    class="md:hidden hidden border-t border-[var(--color-line)] px-5 py-4"
-  >
-    <ul class="flex flex-col gap-3">
-      {
-        nav.map((item) => (
-          <li>
-            <a
-              href={`${base}${item.href}`}
-              class="nav-link block"
-              aria-current={isActive(item.href) ? "page" : undefined}
-            >
-              {item.label}
-            </a>
-          </li>
-        ))
-      }
-      <li>
-        <a href={`${base}/contact`} class="btn btn-primary w-full justify-center text-sm">
-          合作邀約 →
-        </a>
-      </li>
-    </ul>
-  </div>
 </header>
-
-<script is:inline>
-  const btn = document.getElementById("menu-toggle");
-  const panel = document.getElementById("mobile-nav");
-  if (btn && panel) {
-    btn.addEventListener("click", () => {
-      const open = panel.classList.toggle("hidden") === false;
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-  }
-</script>

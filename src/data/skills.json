@@ -13,7 +13,7 @@
     "group": "執行 / Execution",
     "items": [
       "社群經營（IG / FB / Threads）",
-      "KOL / KOC 媒合與議價",
+      "KOL / Vtuber 媒合與議價",
       "活動策劃與場控",
       "新聞稿與媒體公關",
       "短影音腳本企劃"
@@ -38,6 +38,13 @@
       "Slack",
       "Adobe Premiere",
       "ChatGPT / Claude"
+    ]
+  },
+  {
+    "group": "語言 / Language",
+    "items": [
+      "英文 TOEIC 865（Gold Certificate）",
+      "日文 JLPT N3"
     ]
   }
 ]

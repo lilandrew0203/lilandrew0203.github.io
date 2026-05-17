@@ -1,12 +1,12 @@
 ---
 title: "MAKE LOVE, NOT WAR：以議題行銷重新定位品牌"
 client: "情趣夢天堂"
-category: ["品牌活動", "公關議題", "整合行銷"]
+category: ["公益促銷", "公關議題", "整合行銷"]
 period: "2022.03 – 2022.05"
 role: "策略規劃、媒體公關、執行監管"
-featured: true
-order: 3
-coverImage: ""
+featured: false
+order: 7
+coverImage: "/images/works/make-love-not-war/cover.jpg"
 summary: "用一場具國際視野的公益行動，把品牌從「成人」框架拉到「有立場的青年品牌」。"
 kpis:
   - label: "捐款金額"

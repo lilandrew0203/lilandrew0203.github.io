@@ -1,12 +1,12 @@
 ---
 title: "單身也能撒狗糧愛心任務"
 client: "情趣夢天堂 × ARTT"
-category: ["品牌活動", "KOL 合作", "公益議題"]
+category: ["公益促銷", "KOL / 業配合作"]
 period: "2024.05 – 2024.06"
 role: "策略規劃、KOL 媒合、執行"
-featured: true
-order: 1
-coverImage: ""
+featured: false
+order: 6
+coverImage: "/images/works/single-dogs-food/cover.jpg"
 summary: "結合單身議題與動保公益，把品牌幽默感轉成媒體版位，創造 7 家主流媒體自然報導。"
 kpis:
   - label: "社群觸及"
