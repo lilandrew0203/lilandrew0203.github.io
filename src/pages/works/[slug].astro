@@ -131,20 +131,6 @@ const kpis = data.kpis;
     </article>
   </section>
 
-  <!-- ============ TOOLS ============ -->
-  {
-    data.tools.length > 0 && (
-      <section class="mx-auto max-w-6xl px-5 py-12 sm:px-8">
-        <span class="eyebrow">Tools / Platforms</span>
-        <h3 class="h-section mt-3">使用工具</h3>
-        <div class="mt-6 flex flex-wrap gap-2">
-          {data.tools.map((t) => (
-            <span class="chip">{t}</span>
-          ))}
-        </div>
-      </section>
-    )
-  }
 
   <!-- ============ MEDIA ============ -->
   {
@@ -195,21 +181,7 @@ const kpis = data.kpis;
     )
   }
 
-  <!-- ============ NEXT CTA ============ -->
-  <section class="mx-auto max-w-6xl px-5 pb-24 sm:px-8">
-    <div
-      class="flex flex-col items-start justify-between gap-6 rounded-3xl border border-[var(--color-line)] bg-[var(--color-surface)] p-8 sm:p-12 md:flex-row md:items-center"
-    >
-      <div>
-        <span class="eyebrow">Next</span>
-        <h3 class="h-section mt-3">想討論類似的案子？</h3>
-      </div>
-      <div class="flex gap-3">
-        <a href={`${base}/works`} class="btn btn-ghost">看其他案例</a>
-        <a href={`${base}/contact`} class="btn btn-primary">寫信給我 →</a>
-      </div>
-    </div>
-  </section>
+  <div class="pb-16"></div>
 
   <script>
     import "../../scripts/countup.ts";

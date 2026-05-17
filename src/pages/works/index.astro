@@ -12,8 +12,14 @@ const YOUTUBE_PLAYLIST =
 const sections = [
   {
     id: "billboard",
-    title: "看板發想",
-    slugs: ["billboard-creative", "single-dogs-food"],
+    title: "看板發想：把門市變成自媒體",
+    slugs: [
+      "billboard-5080",
+      "billboard-ghost-month",
+      "billboard-goddess",
+      "billboard-april-fools",
+      "single-dogs-food",
+    ],
     youtubeUrl: null,
   },
   {
@@ -25,7 +31,12 @@ const sections = [
   {
     id: "social",
     title: "社群經營",
-    slugs: ["cosmic-contest"],
+    slugs: [
+      "cosmic-contest",
+      "social-trending",
+      "social-store-stories",
+      "social-fake-recruitment",
+    ],
     youtubeUrl: null,
   },
   {
@@ -48,8 +59,7 @@ const sections = [
     <span class="eyebrow">Selected works</span>
     <h1 class="h-display mt-4">代表作品集</h1>
     <p class="mt-6 max-w-2xl text-[var(--color-muted)]">
-      點開任一案例可以看到完整背景、執行策略、KPI 數字、圖片與媒體連結。所有
-      KPI 皆來自實際執行結果或可核對的後台截圖。
+      點開任一案例可以看到完整背景、執行策略、KPI 數字、圖片與媒體連結。
     </p>
   </section>
 
@@ -59,7 +69,6 @@ const sections = [
         const sectionWorks = section.slugs
           .map((slug) => workMap.get(slug))
           .filter(Boolean);
-        if (sectionWorks.length === 0) return null;
 
         return (
           <section>
@@ -75,22 +84,24 @@ const sections = [
                   rel="noreferrer"
                   class="inline-flex items-center gap-2 rounded-full border border-[var(--color-line)] px-4 py-2 text-sm text-[var(--color-muted)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
                 >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.7 15.6V8.4l6.3 3.6-6.3 3.6z" />
                   </svg>
-                  YouTube 作品集 →
+                  其他合作案例 →
                 </a>
               )}
             </div>
 
             {sectionWorks.length > 0 ? (
-              <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {sectionWorks.map((w) => w && <WorkCard entry={w} />)}
+              <div class="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-3 md:grid md:grid-cols-2 md:overflow-x-visible lg:grid-cols-3">
+                {sectionWorks.map(
+                  (w) =>
+                    w && (
+                      <div class="w-[80vw] shrink-0 snap-start md:w-auto">
+                        <WorkCard entry={w} />
+                      </div>
+                    )
+                )}
               </div>
             ) : (
               <p class="text-sm text-[var(--color-subtle)]">暫無案例，持續更新中。</p>

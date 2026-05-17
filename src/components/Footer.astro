@@ -35,15 +35,9 @@ const year = new Date().getFullYear();
         <li>
           <a class="nav-link" href={`mailto:${profile.email}`}>{profile.email}</a>
         </li>
-        {
-          profile.social.map((s) => (
-            <li>
-              <a class="nav-link" href={s.url} target="_blank" rel="noreferrer">
-                {s.label}
-              </a>
-            </li>
-          ))
-        }
+        <li>
+          <a class="nav-link" href={`tel:+886${profile.phone.replace(/\D/g,"").slice(1)}`}>{profile.phone}</a>
+        </li>
       </ul>
     </div>
   </div>
