@@ -38,12 +38,6 @@ media:
     src: "/images/works/event-marketing/3f-opening.jpg"
     caption: "門市三樓開幕看板"
   - type: image
-    src: "/images/works/event-marketing/dark-homework-1.jpg"
-    caption: "音樂祭主題攤位「暗黑國語作業」 (1)"
-  - type: image
-    src: "/images/works/event-marketing/dark-homework-2.jpg"
-    caption: "音樂祭主題攤位「暗黑國語作業」 (2)"
-  - type: image
     src: "/images/works/event-marketing/comic-expo.jpg"
     caption: "動漫祭企業攤 (1)"
   - type: image
@@ -77,9 +71,6 @@ media:
 ### BDSM 主題講座
 與專業團體合作導入內容，以體驗式活動 + 產品情境連結，曝光門市新樓層並提升品牌認知與會員轉換。
 
-### 音樂祭主題攤位「暗黑國語作業」
-結合成人音樂祭與宮廟場域特色，打造「夢天堂」主題攤位——透過創意遊戲、贈品設計提升現場參與與品牌記憶點。
-
 ### 動漫祭企業攤
 主導開拓動漫祭企業攤企劃，負責**展場視覺、選品販售規劃、互動抽獎、宣傳贈品**，結合問卷與社群活動導入會員轉換。
 
@@ -87,4 +78,4 @@ media:
 
 把鬼月看板活動的延伸贈品「符咒浴巾」作為現場互動獎項，活動期間**全數送完**，並引發大量現場詢問與索取需求——線上話題回流到實體場景的成功實驗。
 
-> 看板源頭案例 → [看板發想：把門市變成自媒體](/works/billboard-creative)
+> 看板源頭案例 → [看板發想：把門市變成自媒體](/works/billboard-ghost-month)

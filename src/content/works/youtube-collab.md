@@ -1,36 +1,56 @@
 ---
-title: "YouTube 合作：穩定分潤的長尾內容池"
+title: "Vtuber 分潤合作機制"
 client: "情趣夢天堂"
-category: ["YouTube 合作", "KOL / 業配合作"]
+category: ["Vtuber 合作"]
 period: "2021 – Present"
-role: "合作開發、選題共構、腳本優化、轉換追蹤"
+role: "合作機制設計、開發洽談、成效追蹤"
 featured: false
 order: 5
-coverImage: ""
-summary: "200+ 創作者合作中的 YouTube 子集——從選題、腳本到上線後追蹤完整介入，打造品牌在 YouTube 平台的長尾自然流量池。"
+coverImage: "/images/works/influencer-collab/kuromu-product.webp"
+summary: "針對台灣 Vtuber 圈建立標準化分潤合作機制，累積 60+ 位深度合作，最高單案聯名商品達 400 萬+ 營收，形成創作者圈「情趣用品界 Surfshark」口碑。"
 kpis:
-  - label: "YouTube 合作創作者"
-    value: "100+"
-  - label: "公開合作 Playlist"
-    value: "持續更新"
-tools: ["GA4", "YouTube Analytics", "Notion", "短連結 ROAS 追蹤"]
-partners: []
-media: []
+  - label: "聯名商品營收"
+    value: "400萬+"
+  - label: "Vtuber 深度合作"
+    value: "60+"
+tools: []
+partners: ["庫洛姆", "塔芭絲可", "嗨咖", "黃小艾", "嘿嘿啾芮"]
+media:
+  - type: image
+    src: "/images/works/influencer-collab/kuromu-product.webp"
+    caption: "庫洛姆聯名商品（單案最高 400 萬+ 營收）"
+  - type: image
+    src: "/images/works/influencer-collab/kuromu-1.jpg"
+    caption: "庫洛姆合作素材 (1)"
+  - type: image
+    src: "/images/works/influencer-collab/kuromu-2.jpg"
+    caption: "庫洛姆合作素材 (2)"
+  - type: image
+    src: "/images/works/influencer-collab/tabasco-product.jpg"
+    caption: "塔芭絲可聯名商品外盒"
+  - type: image
+    src: "/images/works/influencer-collab/tabasco.jpg"
+    caption: "塔芭絲可合作素材 (1)"
+  - type: image
+    src: "/images/works/influencer-collab/tabasco-2.jpg"
+    caption: "塔芭絲可合作素材 (2)"
+  - type: image
+    src: "/images/works/influencer-collab/heyhey-jurry.jpg"
+    caption: "嘿嘿啾芮合作"
 ---
 
-## 為什麼 YouTube 值得獨立經營
+## Vtuber 分潤合作 60+ 位
 
-相較其他平台，YouTube 的**演算法傾向長尾內容**——一支業配影片的觸及生命週期可以延續一年以上。對情趣品類來說，這是少數能「投一次、收一年」的內容通路。
+針對台灣 Vtuber 圈建立**標準化分潤合作機制**，設計兼具低門檻與長期經營性的合作模式，透過雙向曝光與營收共享機制，形成雙向曝光流量。
 
-## 介入流程
+## 轉換設計
 
-- **選題共構**：與創作者一起對齊「觀眾接受度 × 品牌訊息」的交集，避免單方面廣告感
-- **腳本優化**：協助 CTA 位置、產品出場時機、結尾轉場
-- **轉換追蹤**：與 GA4 + 短連結結合，每支影片獨立追蹤 ROAS
-- **長期合作篩選**：ROAS > 2 的創作者進入長期合作池
+- 提供**粉絲折扣碼**與限定優惠，提升觀眾參與感與轉換率
+- 設定「達業績指定門檻後提升分潤」機制，鼓勵積極宣傳與推廣
+- 提供實體牆面曝光、官網 BN 輪播、抽獎資源等合作福利，提升雙方整體曝光效益
 
-## 延伸觀看
+## 成果回顧
 
-🔗 [其他 YouTube 合作案例（Playlist）](https://youtube.com/playlist?list=PLgP7ZYIxsAP8LRLj_jmnvUW2dgb5v2qId)
-
-> 完整 KOL / Vtuber 合作體系 → [Vtuber × KOL 商業合作](/works/influencer-collab)
+- 累積 **60+ 位 Vtuber** 合作
+- 最高單案聯名商品累積 **400 萬+ 營收**，並延伸為長期合作關係
+- 因合作成效與圈內擴散，逐漸形成**「情趣用品界 Surfshark」**之創作者圈口碑

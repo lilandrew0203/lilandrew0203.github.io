@@ -1,49 +1,48 @@
 ---
-title: "單身也能撒狗糧愛心任務"
+title: "色色也能救浪浪！？撒狗糧公益企劃"
 client: "情趣夢天堂 × ARTT"
-category: ["公益促銷", "KOL / 業配合作"]
+category: ["公益促銷", "話題行銷"]
 period: "2024.05 – 2024.06"
-role: "策略規劃、KOL 媒合、執行"
+role: "策略規劃、活動設計、執行、廠商聯繫"
 featured: false
 order: 6
 coverImage: "/images/works/single-dogs-food/cover.jpg"
-summary: "結合單身議題與動保公益，把品牌幽默感轉成媒體版位，創造 7 家主流媒體自然報導。"
+summary: "主導話題企劃與活動設計，將「撒狗糧」轉化為公益促銷活動，設計低門檻參與規則成功募集 6,147 公斤飼料，獲自由時報等主流媒體報導。"
 kpis:
+  - label: "募集飼料"
+    value: "6,147kg"
   - label: "社群觸及"
     value: "820萬"
-    growth: "+340%"
-  - label: "互動率"
-    value: "8.2%"
-    growth: "+2.1x"
   - label: "媒體報導"
     value: "7篇"
-  - label: "公益金額"
-    value: "120萬"
-tools: ["Meta Ads", "GA4", "Notion", "Canva", "Premiere"]
+tools: []
 partners: ["反正我很閒 ARTT", "台灣動物緊急救援", "Yahoo TV"]
 media:
   - type: youtube
     src: "https://www.youtube.com/embed/75jtZYXXx3Q"
-    caption: "ARTT × 情趣夢天堂 主視覺影片"
+    caption: "ARTT × 情趣夢天堂 - 單身也能撒狗糧愛心任務"
+  - type: image
+    src: "/images/works/single-dogs-food/cover.jpg"
+    caption: "撒狗糧公益企劃主視覺"
+  - type: image
+    src: "/images/works/single-dogs-food/charity-feedback-card.jpg"
+    caption: "優惠回饋小卡設計"
 ---
 
-## 背景與挑戰
+## 企劃核心
 
-每年五月母親節到端午檔期之間，是品牌話題與媒體版位最稀缺的時段。如何在沒有大筆媒體預算下，把「品牌幽默」轉成「社會議題」、進而換到媒體自然曝光，是這個案子最核心的挑戰。
-
-我們鎖定兩個關鍵字：**單身**、**毛孩**。前者代表受眾的情緒缺口，後者則是台灣社群最容易動員的議題。把兩者用一個有點壞、又帶著體溫的活動 tagline 串起來——「單身也能撒狗糧」。
+主導話題企劃、活動設計與執行，將「撒狗糧」轉化為公益促銷活動，設計低門檻參與規則成功募集 **6,147 公斤飼料**，並完成廠商聯繫與實際捐贈流程，同步提升品牌形象與消費者參與意願，並透過優惠小卡之回饋機制促進回流與後續轉換。
 
 ## 執行策略
 
+鎖定兩個關鍵字：**單身**、**毛孩**。把兩者用一個有點壞、又帶著體溫的 tagline 串起來——「單身也能撒狗糧」。
+
 - 與 ARTT 合作短影片，把品牌的成人語境降溫成大眾可以分享的內容
 - 與台灣動物緊急救援組織共同設計募款匹配機制，每筆消費品牌加碼捐款
-- 鎖定 3 位中型 KOL（情感類 / 寵物類 / 喜劇類）做議題擴散
-- 公關面：把活動包裝成「公益新聞」，主動 pitch 8 家主流媒體
+- 設計優惠回饋小卡，促進消費者活動後回流
 
 ## 成果回顧
 
-- 媒體面：取得 Yahoo TV、ETtoday、蘋果新聞網等共 7 家主流媒體自然報導
-- 社群面：單支主視覺影片觸及破 820 萬，留言互動率 8.2%
-- 商務面：活動期間客單價提升 22%，並把品牌印象從「成人」拉到「有溫度的青年品牌」
-
-> 我學到的是：當品牌本身有爭議性，更要主動把議題包裝成「人們願意轉發的故事」，而不是「公司想說的話」。
+- [自由時報｜單身也能撒狗糧！情趣用品商募捐6千公斤飼料溫飽2.8萬毛孩](https://news.ltn.com.tw/news/life/breakingnews/4346672)
+- [ARTT 官方頻道｜ARTT X 情趣夢天堂 - 單身也能撒狗糧愛心任務](https://www.youtube.com/watch?v=75jtZYXXx3Q)
+- 社群觸及 820 萬，7 家主流媒體自然報導
