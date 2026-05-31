@@ -33,13 +33,27 @@ let kpiText = primaryKpi?.value || "";
 if (isBillboardSection && isCategoryA && primaryKpi) {
   kpiText = `${primaryKpi.label} ${primaryKpi.value}`;
 }
+
+const coverPositions: Record<string, string> = {
+  "billboard-5080": "center 30%",
+  "billboard-ghost-month": "center 35%",
+  "billboard-goddess": "center 25%",
+  "billboard-april-fools": "center 30%",
+  "single-dogs-food": "center 50%",
+};
+const coverPosition = coverPositions[slug] || "center";
 ---
 
 <a href={href} class={`work-card reveal ${size === "large" ? "" : ""}`}>
   <div class="work-card__cover">
     {
       data.coverImage ? (
-        <img src={data.coverImage} alt={`${data.title} cover`} loading="lazy" />
+        <img
+          src={data.coverImage}
+          alt={`${data.title} cover`}
+          loading="lazy"
+          style={coverPosition ? `object-position: ${coverPosition};` : ""}
+        />
       ) : (
         <div class="work-card__cover-fallback">{data.client.toUpperCase()}</div>
       )

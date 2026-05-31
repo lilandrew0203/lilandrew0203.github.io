@@ -6,7 +6,7 @@ period: "2023.07"
 role: "文案發想、贈品 IP 設計、執行"
 featured: false
 order: 31
-coverImage: "/images/works/billboard-creative/ghost-month-banner.jpg"
+coverImage: "/images/works/billboard-creative/ghost-month-talisman.jpg"
 summary: "把鬼月文化與接地氣諧音梗結合，BN 上線後路上觀察學院貼文引發 6.3 萬讚、2000+ 分享，衍生贈品「符咒浴巾」成為長期品牌 IP，並延伸至成人音樂祭主題攤位。"
 kpis:
   - label: "社群讚數"
