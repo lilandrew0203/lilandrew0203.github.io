@@ -63,27 +63,15 @@ const coverPosition = coverPositions[slug] || "center";
       style="background: linear-gradient(180deg, rgba(15,15,15,0) 50%, rgba(15,15,15,0.85) 100%);"
     >
     </div>
-    <div class="absolute bottom-3 left-3 right-3 flex flex-wrap gap-1.5">
-      {
-        data.category.slice(0, 3).map((c) => (
-          <span class="chip" style="background: rgba(15,15,15,0.6); border-color: rgba(255,255,255,0.18); color: #fff;">
-            {c}
-          </span>
-        ))
-      }
-    </div>
   </div>
 
-  <div class="p-5">
-    <div
-      class="flex items-center justify-between text-xs text-[var(--color-muted)]"
-    >
-      <span>{data.client}</span>
-      <span>{data.period}</span>
-    </div>
-    <h3 class="mt-2 text-xl font-semibold text-[var(--color-fg)]">
-      {data.title}
-    </h3>
+  <div class="p-5 flex flex-col justify-center">
+    {(slug === "event-marketing" || slug === "influencer-collab" || slug === "youtube-collab") && (
+      <div class="text-xs text-[var(--color-muted)] mb-2">
+        <span>{data.period}</span>
+      </div>
+    )}
+    <h3 class="text-xl font-semibold text-[var(--color-fg)]" set:html={data.title} />
     {
       data.summary && (
         <p class="mt-2 line-clamp-2 text-sm text-[var(--color-muted)]">

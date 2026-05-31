@@ -2,7 +2,7 @@
 title: "Vtuber 分潤合作機制"
 client: "情趣夢天堂"
 category: ["Vtuber 合作"]
-period: "2021 – Present"
+period: "2022 – Present"
 role: "合作機制設計、開發洽談、成效追蹤"
 featured: false
 order: 5
