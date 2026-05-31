@@ -13,6 +13,26 @@ const slug = entry.id.replace(/\.md$/, "");
 const href = `${base}/works/${slug}`;
 
 const primaryKpi = data.kpis?.[0];
+
+const isBillboardSection = [
+  "billboard-5080",
+  "billboard-ghost-month",
+  "billboard-goddess",
+  "billboard-april-fools",
+  "single-dogs-food",
+].includes(slug);
+
+const isCategoryA = [
+  "billboard-ghost-month",
+  "single-dogs-food",
+].includes(slug);
+
+const hideKpiLabel = isBillboardSection;
+
+let kpiText = primaryKpi?.value || "";
+if (isBillboardSection && isCategoryA && primaryKpi) {
+  kpiText = `${primaryKpi.label} ${primaryKpi.value}`;
+}
 ---
 
 <a href={href} class={`work-card reveal ${size === "large" ? "" : ""}`}>
@@ -62,17 +82,19 @@ const primaryKpi = data.kpis?.[0];
       primaryKpi && (
         <div class="mt-5 flex items-end justify-between border-t border-[var(--color-line)] pt-4">
           <div>
-            <div class="text-[10px] uppercase tracking-[0.3em] text-[var(--color-subtle)]">
-              {primaryKpi.label}
-            </div>
+            {!hideKpiLabel && (
+              <div class="text-[10px] uppercase tracking-[0.3em] text-[var(--color-subtle)]">
+                {primaryKpi.label}
+              </div>
+            )}
             <div
-              class="mt-1 font-bold leading-none"
+              class={hideKpiLabel ? "font-bold leading-none" : "mt-1 font-bold leading-none"}
               style="font-size: clamp(1.5rem, 3vw, 2rem); color: var(--color-accent);"
             >
-              {primaryKpi.value}
+              {kpiText}
             </div>
           </div>
-          {primaryKpi.growth && (
+          {!hideKpiLabel && primaryKpi.growth && (
             <span
               class="rounded-full px-2.5 py-1 text-xs font-medium"
               style="background: var(--color-accent-soft); color: var(--color-accent);"

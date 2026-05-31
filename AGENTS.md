@@ -82,6 +82,10 @@ npm run build
 **只要 build 過、0 errors，就可以 commit**。
 build fail 不要 `--no-verify` 或刪 schema 來繞過，請看 §6 troubleshooting。
 
+> **使用者明確要求 commit / push / 上線時**，照 [`agent/skills/commit_push.md`](./agent/skills/commit_push.md) 的完整流程跑（build gate → stage 指名檔 → conventional commit message → push 觸發部署 → 回報）。**未經使用者明示，不要自己 commit。**
+>
+> 使用者可在編輯器中用 `@commit_push` fuzzy 觸發此檔（Antigravity / Cursor / Claude Code 的 file picker 都支援）。
+
 ---
 
 ## 4. 新增一個作品的標準範本
