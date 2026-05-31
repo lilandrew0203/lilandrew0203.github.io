@@ -6,7 +6,7 @@ period: "2021 – Present"
 role: "活動策劃、現場執行、贈品發想、動線與視覺設計"
 featured: true
 order: 4
-coverImage: "/images/works/event-marketing/mumu-day-manager.jpg"
+coverImage: "/images/works/event-marketing/tonyq-event.jpg"
 summary: "從 0 建立一日店長活動，持續穩定營運近 4 年；延伸到動漫展、BDSM 講座、音樂祭擺攤等多場域體驗，把線下流量轉成會員與長期回訪。"
 kpis:
   - label: "一日店長持續"

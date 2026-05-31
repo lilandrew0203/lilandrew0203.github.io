@@ -1,5 +1,5 @@
 ---
-title: "看板發想：把門市變成自媒體"
+title: "看板發想"
 client: "情趣夢天堂"
 category: ["看板創意", "話題行銷", "公關議題"]
 period: "2021 – Present"
