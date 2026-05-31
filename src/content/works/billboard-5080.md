@@ -10,7 +10,7 @@ coverImage: "/images/works/billboard-creative/5080-nvidia.jpg"
 summary: "NVIDIA RTX 5080 發表期間，用仿真規格圖樣看板讓路人誤以為是顯卡廣告，引發 Reddit 海外論壇與民視、鏡周刊主動報導。"
 kpis:
   - label: "話題熱議擴散"
-    value: "海內外"
+    value: "海內外熱議擴散"
     growth: "自然觸及"
   - label: "Reddit 海外論壇"
     value: "國際擴散"

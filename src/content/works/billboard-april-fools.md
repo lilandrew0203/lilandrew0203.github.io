@@ -10,7 +10,7 @@ coverImage: "/images/works/billboard-creative/competitor-collab-1.jpg"
 summary: "因長期看板話題操作累積品牌辨識度，促成同業 DR.情趣主動邀約愚人節聯動，把競爭關係轉為彼此擴散流量的合作。"
 kpis:
   - label: "同業邀約聯動"
-    value: "首次合作"
+    value: "同業邀約聯動"
   - label: "跨品牌擴散"
     value: "雙方受眾"
 tools: []
