@@ -29,7 +29,11 @@ const isCategoryA = [
 
 const hideKpiLabel = isBillboardSection;
 
-let kpiText = primaryKpi?.value || "";
+const cardKpiOverrides: Record<string, string> = {
+  "billboard-5080": "國內外熱議擴散",
+};
+
+let kpiText = cardKpiOverrides[slug] ?? primaryKpi?.value ?? "";
 if (isBillboardSection && isCategoryA && primaryKpi) {
   kpiText = `${primaryKpi.label} ${primaryKpi.value}`;
 }

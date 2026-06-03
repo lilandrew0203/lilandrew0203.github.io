@@ -9,9 +9,8 @@ order: 32
 coverImage: "/images/works/billboard-creative/goddess-billboard.jpg"
 summary: "把當時社群熱議的九天玄女梗轉化為實體看板，獲主流媒體報導，並由原梗創作者本人主動分享，達成跨圈層擴散。"
 kpis:
-  - label: "主流媒體報導"
+  - label: "新聞流量"
     value: "主流媒體報導"
-    growth: "自然觸及"
   - label: "原創作者分享"
     value: "主動轉發"
   - label: "自然流量"
