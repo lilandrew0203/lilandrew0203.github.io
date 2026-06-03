@@ -18,10 +18,10 @@ partners: ["DR.情趣"]
 media:
   - type: image
     src: "/images/works/billboard-creative/competitor-collab-1.jpg"
-    caption: "愚人節同業聯動企劃 (1)"
+    caption: "看板實拍"
   - type: image
     src: "/images/works/billboard-creative/competitor-collab-2.jpg"
-    caption: "愚人節同業聯動企劃 (2)"
+    caption: "看板實拍"
 ---
 
 ## 企劃核心
@@ -35,5 +35,5 @@ media:
 ## 成果回顧
 
 - [Threads｜網友分享](https://www.threads.com/@yuz._132/post/DWvMExqk-hX)
-- 確立情趣夢天堂作為業界「話題操作標竿」的地位
+- 確立品牌為業界「話題操作標竿」地位
 - 雙方受眾相互接觸，自然擴大各自的覆蓋範圍

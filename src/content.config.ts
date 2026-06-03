@@ -30,6 +30,7 @@ const works = defineCollection({
           type: z.enum(["image", "youtube"]),
           src: z.string(),
           caption: z.string().optional(),
+          fit: z.enum(["cover", "contain", "original"]).optional(),
         }),
       )
       .default([]),

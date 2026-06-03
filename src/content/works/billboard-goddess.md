@@ -14,26 +14,23 @@ kpis:
     growth: "自然觸及"
   - label: "原創作者分享"
     value: "主動轉發"
-  - label: "KOL 自發分享"
-    value: "多位"
+  - label: "自然流量"
+    value: "多位 KOL 自發分享"
 tools: []
 partners: ["Yahoo!新聞"]
 media:
   - type: image
     src: "/images/works/billboard-creative/goddess-billboard.jpg"
-    caption: "九天玄女時事看板"
+    caption: "看板實拍"
   - type: image
     src: "/images/works/billboard-creative/goddess-creator-share.jpg"
     caption: "原梗創作者本人主動分享"
+    fit: original
 ---
 
 ## 企劃核心
 
 結合當時高討論度網紅「九天玄女降落」話題，利用雙看板高低差製造「800英尺」、「100英尺」創意構圖，透過高辨識度的即時話題操作，引發社群拍攝、原作者轉發與媒體擴散。
-
-## 執行策略
-
-社群上的熱門梗生命週期極短。**速度是成功的關鍵**——快速把「九天玄女」梗的核心意象轉化為看板文案，在話題冷卻前上刊，讓實體空間成為網路梗的延伸舞台。
 
 ## 成果回顧
 

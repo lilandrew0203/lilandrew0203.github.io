@@ -23,7 +23,7 @@ const kpis = data.kpis;
 
 <BaseLayout title={`${data.title} | 陳彥竹`} description={data.summary}>
   <!-- ============ HEADER ============ -->
-  <section class="mx-auto max-w-6xl px-5 pt-12 sm:px-8 sm:pt-20">
+  <section class="mx-auto max-w-6xl px-5 pt-10 sm:px-8 sm:pt-14">
     <a
       href={`${base}/works`}
       class="inline-flex items-center gap-2 text-sm text-[var(--color-muted)] hover:text-[var(--color-accent)]"
@@ -38,90 +38,41 @@ const kpis = data.kpis;
     <h1 class="h-display mt-6" set:html={data.title} />
 
     <div
-      class="mt-8 grid gap-6 border-t border-[var(--color-line)] pt-8 md:grid-cols-4"
+      class="mt-6 grid gap-6 border-t border-[var(--color-line)] pt-6 md:grid-cols-4"
     >
-      <div>
-        <div class="text-[10px] uppercase tracking-[0.3em] text-[var(--color-subtle)]">
-          客戶
-        </div>
-        <div class="mt-2 font-medium">{data.client}</div>
-      </div>
-      <div>
-        <div class="text-[10px] uppercase tracking-[0.3em] text-[var(--color-subtle)]">
-          執行時間
-        </div>
-        <div class="mt-2 font-medium">{data.period}</div>
-      </div>
       <div>
         <div class="text-[10px] uppercase tracking-[0.3em] text-[var(--color-subtle)]">
           我的角色
         </div>
         <div class="mt-2 font-medium">{data.role}</div>
       </div>
-      {
-        data.partners.length > 0 && (
-          <div>
-            <div class="text-[10px] uppercase tracking-[0.3em] text-[var(--color-subtle)]">
-              合作夥伴
-            </div>
-            <div class="mt-2 font-medium">{data.partners.join("、")}</div>
-          </div>
-        )
-      }
-    </div>
-  </section>
-
-  <!-- ============ COVER ============ -->
-  <section class="mx-auto mt-12 max-w-6xl px-5 sm:px-8">
-    <div
-      class="relative overflow-hidden rounded-3xl border border-[var(--color-line)] bg-[var(--color-surface)]"
-      style="aspect-ratio: 16 / 9;"
-    >
-      {
-        data.coverImage ? (
-          <img
-            src={data.coverImage}
-            alt={`${data.title} cover`}
-            class="h-full w-full object-cover"
-          />
-        ) : (
-          <div
-            class="flex h-full w-full items-center justify-center text-sm tracking-[0.4em] text-[var(--color-subtle)]"
-          >
-            COVER IMAGE — {data.client.toUpperCase()}
-          </div>
-        )
-      }
     </div>
   </section>
 
   <!-- ============ KPI BENTO ============ -->
   {
     kpis.length > 0 && (
-      <section class="mx-auto max-w-6xl px-5 py-20 sm:px-8">
+      <section class="mx-auto max-w-6xl px-5 pt-8 pb-4 sm:px-8">
         <span class="eyebrow">KPI 成果</span>
 
-        <div class="mt-10 bento">
-          {kpis.map((k, i) => {
-            const span = i === 0 ? "b-1 md:col-span-3" : i === 1 ? "b-2" : "b-2";
-            return (
-              <div class={span}>
-                <KpiCard
-                  label={k.label}
-                  value={k.value}
-                  growth={k.growth}
-                  emphasis={i === 0}
-                />
-              </div>
-            );
-          })}
+        <div class="mt-6 flex flex-wrap gap-4">
+          {kpis.map((k) => (
+            <div class="min-w-[160px] flex-1">
+              <KpiCard
+                label={k.label}
+                value={k.value}
+                growth={k.growth}
+                emphasis={false}
+              />
+            </div>
+          ))}
         </div>
       </section>
     )
   }
 
   <!-- ============ BODY (markdown) ============ -->
-  <section class="mx-auto max-w-3xl px-5 py-12 sm:px-8">
+  <section class="mx-auto max-w-3xl px-5 py-8 sm:px-8">
     <article
       class="prose prose-invert"
       style="--tw-prose-body: var(--color-fg);"
@@ -134,7 +85,7 @@ const kpis = data.kpis;
   <!-- ============ MEDIA ============ -->
   {
     data.media.length > 0 && (
-      <section class="mx-auto max-w-6xl px-5 py-12 sm:px-8">
+      <section class="mx-auto max-w-6xl px-5 py-8 sm:px-8">
         <span class="eyebrow">Media</span>
         <div class="mt-8 grid gap-6 md:grid-cols-2">
           {data.media.map((m) =>
@@ -160,11 +111,12 @@ const kpis = data.kpis;
                 )}
               </figure>
             ) : (
-              <figure>
+              <figure class={m.fit === "original" ? "overflow-visible" : ""}>
                 <img
                   src={m.src}
                   alt={m.caption ?? ""}
-                  class="w-full rounded-2xl border border-[var(--color-line)]"
+                  class="rounded-2xl border border-[var(--color-line)]"
+                  style={m.fit === "original" ? "display: block; width: auto; zoom: 2; max-width: none;" : "width: 100%;"}
                 />
                 {m.caption && (
                   <figcaption class="mt-3 text-sm text-[var(--color-muted)]">

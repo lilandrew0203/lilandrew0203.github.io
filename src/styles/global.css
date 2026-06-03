@@ -44,7 +44,7 @@ body {
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.05;
-  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-size: clamp(2rem, 5.6vw, 4.8rem);
 }
 .h-section {
   font-family: var(--font-tc);
@@ -58,7 +58,7 @@ body {
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 0.95;
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(1.25rem, 3vw, 2.5rem);
   color: var(--color-accent);
 }
 

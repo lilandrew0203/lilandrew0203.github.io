@@ -20,10 +20,10 @@ partners: ["路上觀察學院"]
 media:
   - type: image
     src: "/images/works/billboard-creative/ghost-month-banner.jpg"
-    caption: "鬼月活動主視覺 BN"
+    caption: "看板實拍"
   - type: image
     src: "/images/works/billboard-creative/ghost-month-banner-2.jpg"
-    caption: "延伸 BN"
+    caption: "看板實拍"
   - type: image
     src: "/images/works/billboard-creative/ghost-month-giveaway.jpg"
     caption: "贈品「符咒浴巾」發想"
@@ -34,12 +34,12 @@ media:
 
 ## 企劃核心
 
-主導鬼月系列企劃發想，規劃大型符咒看板，透過**諧音梗、民俗元素與誇張視覺**呈現，同時結合促銷活動曝光，延伸發想創意周邊贈品，並負責文案、廠商溝通與延伸使用，成功提升社群討論度與品牌記憶點。
+主導鬼月系列企劃發想，規劃大型符咒看板，透過諧音梗、民俗元素與誇張視覺呈現，同時<span style="color: var(--color-accent);">結合促銷活動曝光，延伸發想創意周邊贈品，並負責文案、廠商溝通與延伸使用</span>，成功提升社群討論度與品牌記憶點。
 
 ## 成果回顧
 
 - [路上觀察學院｜社群擴散貼文（6.3萬+按讚、2000+分享）](https://www.facebook.com/share/p/1H3TEqz9xU/)
-- 「符咒浴巾」贈品供不應求，成為長期應用之品牌 IP
+- 「符咒浴巾」反響熱烈，成為長期應用之品牌贈品
 
 ## 延伸應用：音樂祭主題攤位
 
