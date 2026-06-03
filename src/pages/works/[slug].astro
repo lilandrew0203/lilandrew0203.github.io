@@ -35,7 +35,7 @@ const kpis = data.kpis;
       {data.category.map((c) => <span class="chip">{c}</span>)}
     </div>
 
-    <h1 class="h-display mt-6">{data.title}</h1>
+    <h1 class="h-display mt-6" set:html={data.title} />
 
     <div
       class="mt-8 grid gap-6 border-t border-[var(--color-line)] pt-8 md:grid-cols-4"
@@ -100,7 +100,6 @@ const kpis = data.kpis;
     kpis.length > 0 && (
       <section class="mx-auto max-w-6xl px-5 py-20 sm:px-8">
         <span class="eyebrow">KPI 成果</span>
-        <h2 class="h-section mt-3">這個案子留下了什麼數字</h2>
 
         <div class="mt-10 bento">
           {kpis.map((k, i) => {
@@ -137,7 +136,6 @@ const kpis = data.kpis;
     data.media.length > 0 && (
       <section class="mx-auto max-w-6xl px-5 py-12 sm:px-8">
         <span class="eyebrow">Media</span>
-        <h3 class="h-section mt-3">圖片與影片</h3>
         <div class="mt-8 grid gap-6 md:grid-cols-2">
           {data.media.map((m) =>
             m.type === "youtube" ? (
