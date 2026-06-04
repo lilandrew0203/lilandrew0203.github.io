@@ -13,23 +13,25 @@ kpis:
     value: "6.3萬+"
   - label: "分享"
     value: "2000+"
-  - label: "贈品延續使用"
+  - label: "贈品延伸應用"
     value: "長期 IP"
 tools: []
 partners: ["路上觀察學院"]
 media:
   - type: image
-    src: "/images/works/billboard-creative/ghost-month-banner.jpg"
+    src: "/images/works/billboard-creative/ghost-month-talisman.jpg"
     caption: "看板實拍"
+  - type: image
+    src: "/images/works/billboard-creative/ghost-month-banner.jpg"
+    caption: "贈品-符咒浴巾"
   - type: image
     src: "/images/works/billboard-creative/ghost-month-banner-2.jpg"
-    caption: "看板實拍"
+    caption: "贈品-創意平安符"
   - type: image
     src: "/images/works/billboard-creative/ghost-month-giveaway.jpg"
-    caption: "贈品「符咒浴巾」發想"
-  - type: image
-    src: "/images/works/billboard-creative/ghost-month-talisman.jpg"
-    caption: "符咒應用場景"
+    caption: "贈品-符咒貼紙"
+mediaLayout: featured-left
+campaignMedia: []
 ---
 
 ## 企劃核心
@@ -43,6 +45,4 @@ media:
 
 ## 延伸應用：音樂祭主題攤位
 
-將高討論度的「符咒」主題應用至成人音樂祭，結合台灣宮廟文化與成人諧音風格，打造「夢天堂」主題攤位。透過視覺佈置、體驗型商品展示、互動遊戲強化活動體驗。
-
-延用「符咒浴巾」作為互動贈品，活動期間全數送完，並引發大量現場詢問與拍照分享，成功延續話題與品牌記憶點。
+將高討論度的「符咒」主題延伸至成人音樂祭，結合宮廟文化打造「夢天堂」主題攤位，透過互動遊戲與體驗式展示提升參與感，<span style="color: var(--color-accent);">延用符咒浴巾作為實體活動贈品</span>，活動期間全數送完，當日引發大量詢問與分享，<span style="color: var(--color-accent);">成功延續話題熱度與品牌記憶點</span>。

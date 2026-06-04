@@ -22,6 +22,16 @@ const works = defineCollection({
         }),
       )
       .default([]),
+    mediaLayout: z.enum(["default", "featured-left"]).optional(),
+    campaignMedia: z
+      .array(
+        z.object({
+          type: z.enum(["image", "youtube"]),
+          src: z.string(),
+          caption: z.string().optional(),
+        }),
+      )
+      .optional(),
     tools: z.array(z.string()).default([]),
     partners: z.array(z.string()).default([]),
     media: z
