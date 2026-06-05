@@ -6,7 +6,7 @@ period: "2022 – 2026.05"
 role: "合作機制設計、開發洽談、成效追蹤"
 featured: false
 order: 5
-coverImage: "/images/works/influencer-collab/kuromu-product.webp"
+coverImage: "/images/works/influencer-collab/kuromu-1.jpg"
 summary: "針對台灣 Vtuber 圈建立標準化分潤合作機制，累積 60+ 位深度合作，最高單案聯名商品達 400 萬+ 營收，形成創作者圈「情趣用品界 Surfshark」口碑。"
 kpis:
   - label: "聯名商品營收"
