@@ -3,7 +3,7 @@ title: "愚人節企劃！<br>競業變合作夥伴"
 client: "情趣夢天堂 × DR.情趣"
 category: ["看板創意", "話題行銷"]
 period: "2024.04"
-role: "企劃、執行、跨品牌溝通協調"
+role: "專案統籌、企劃發想、視覺方向、多方溝通整合、話題操作"
 featured: false
 order: 33
 coverImage: "/images/works/billboard-creative/competitor-collab-1.jpg"
@@ -21,12 +21,12 @@ media:
     caption: "看板實拍"
   - type: image
     src: "/images/works/billboard-creative/competitor-collab-2.jpg"
-    caption: "看板實拍"
+    caption: "Dr.情趣國道看板實拍"
 ---
 
 ## 企劃核心
 
-因看板話題操作累積品牌知名度，促成同業主動邀約合作，進而延伸發想愚人節聯動企劃。將原本對立的競品關係營造成「業界雙龍頭合作」的設定，以偏頑皮友好的「到此一遊」塗鴉互動呈現。
+<span style="color: var(--color-accent);">看板話題操作累積品牌知名度，促成同業主動邀約合作</span>，進而延伸發想愚人節聯動企劃。將原本對立的競品關係營造成「業界雙龍頭合作」的設定，以偏頑皮友好的「到此一遊」塗鴉互動呈現。
 
 ## 企劃執行
 

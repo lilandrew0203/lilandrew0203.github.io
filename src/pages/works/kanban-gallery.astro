@@ -1,0 +1,125 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const images = [
+  "kb-01-halloween.jpg",
+  "kb-02-new-product-gambler.jpg",
+  "kb-03-spring-festival.jpg",
+  "kb-04-cambodia.jpg",
+  "kb-05-kai.jpg",
+  "kb-06-skirt-umbrella.jpg",
+  "kb-07-election.jpg",
+  "kb-08-livestream.png",
+  "kb-09-tax.jpg",
+  "kb-10-dogfood-vtuber.jpg",
+  "kb-11-vtuber-collab.jpg",
+  "kb-12-illustrator-newyear.jpg",
+  "kb-13-goblin.jpg",
+  "kb-16-comment.jpg",
+  "kb-18-ghost-month-2023.jpg",
+  "kb-19-ghost-month-2024.jpg",
+  "kb-20-ghost-month-2025.png",
+  "kb-21-618-vtuber.jpg",
+  "kb-22-avidia.jpeg",
+  "kb-23-bdsm-pokemon.jpg",
+  "kb-24-dr-collab-1.jpg",
+  "kb-25-dr-collab-2.jpg",
+  "kb-26-adult-cover.jpg",
+  "kb-27-google-captcha.jpg",
+  "kb-28-metoo.jpg",
+  "kb-29-sky-illustrator.jpg",
+  "kb-30-vtuber-doctor.jpg",
+  "kb-15-shiba.jpg",
+  "kb-14-goddess.jpg",
+  "kb-17-double11.jpg",
+];
+---
+
+<BaseLayout title="看板作品集 | 陳彥竹">
+  <section class="mx-auto max-w-6xl px-5 pt-16 pb-24 sm:px-8 sm:pt-24">
+    <a
+      href={`${base}/works`}
+      class="inline-flex items-center gap-2 text-sm text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+    >
+      ← 回作品列表
+    </a>
+
+    <h1 class="h-display mt-8">看板作品集</h1>
+
+    <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {images.map((filename) => {
+        const src = `${base}/images/all-kanban/${filename}`;
+        const name = filename.replace(/\.[^.]+$/, "");
+        return (
+          <button
+            class="gallery-item group relative overflow-hidden rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)] transition-colors hover:border-[var(--color-accent)]"
+            data-src={src}
+            data-caption={name}
+            aria-label={name}
+          >
+            <img
+              src={src}
+              alt={name}
+              loading="lazy"
+              class="aspect-[3/4.5] w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          </button>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div
+    id="lightbox"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4"
+    role="dialog"
+    aria-modal="true"
+  >
+    <button
+      id="lightbox-close"
+      class="absolute right-5 top-5 text-3xl text-white opacity-70 hover:opacity-100"
+      aria-label="關閉"
+    >✕</button>
+    <img
+      id="lightbox-img"
+      src=""
+      alt=""
+      class="max-h-[90vh] max-w-[90vw] rounded-xl object-contain"
+    />
+    <p id="lightbox-caption" class="absolute bottom-6 text-sm text-white/60"></p>
+  </div>
+</BaseLayout>
+
+<script>
+  const lightbox = document.getElementById("lightbox")!;
+  const lbImg = document.getElementById("lightbox-img") as HTMLImageElement;
+  const lbCaption = document.getElementById("lightbox-caption")!;
+  const lbClose = document.getElementById("lightbox-close")!;
+
+  document.querySelectorAll<HTMLButtonElement>(".gallery-item").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      lbImg.src = btn.dataset.src!;
+      lbImg.alt = btn.dataset.caption!;
+      lbCaption.textContent = btn.dataset.caption!;
+      lightbox.classList.remove("hidden");
+      lightbox.classList.add("flex");
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.add("hidden");
+    lightbox.classList.remove("flex");
+    lbImg.src = "";
+  }
+
+  lbClose.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
+</script>

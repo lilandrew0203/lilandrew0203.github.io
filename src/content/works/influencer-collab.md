@@ -3,7 +3,7 @@ title: "KOL / KOC 商業合作"
 client: "情趣夢天堂 / DP TOYS"
 category: ["KOL / 業配合作"]
 period: "2021 – Present"
-role: "合作開發、規劃、內容優化、成效追蹤"
+role: "合作開發、商品規劃、雙向溝通、內容優化、成效追蹤、長期關係經營"
 featured: false
 order: 2
 coverImage: "/images/works/influencer-collab/artt.jpg"
@@ -15,21 +15,21 @@ kpis:
     value: "40萬+"
 tools: []
 partners: ["反正我很閒 ARTT", "嗨咖", "黃小艾"]
+mediaImageFit: contain
 media:
   - type: image
     src: "/images/works/influencer-collab/artt.jpg"
-    caption: "反正我很閒 ARTT 議題型合作"
   - type: image
     src: "/images/works/influencer-collab/hica.jpg"
-    caption: "嗨咖合作"
   - type: image
     src: "/images/works/influencer-collab/huang-xiao-ai.jpg"
-    caption: "黃小艾合作"
+  - type: image
+    src: "/images/works/influencer-collab/heyhey-jurry-new.jpg"
 ---
 
 ## 合作超過 200+ 創作者
 
-涵蓋 YouTuber / Vtuber / 社群網紅 / 部落客 / 團購主，主導**開發洽談 → 合作規劃 → 內容優化 → 成效追蹤**的完整流程，同時致力於優化商品與導購文案，以提高成效轉換。
+涵蓋 YouTuber / Vtuber / 社群網紅 / 部落客 / 團購主，主導**開發洽談 → 公司團隊與創作者雙向溝通 → 內容優化 → 成效追蹤**的完整流程，同時致力於優化商品與導購文案，以提高成效轉換。
 
 依據 **ROAS > 2** 的成效門檻篩選再合作對象，持續擴大長期合作比例，過往合作累積形成長尾效益，平均每月穩定貢獻 **40 萬+ 可追蹤營收**。
 

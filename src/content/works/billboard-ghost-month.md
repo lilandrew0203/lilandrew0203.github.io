@@ -3,7 +3,7 @@ title: "這諧音怪合理！？<br>結合文化與產業的鬼月企劃"
 client: "情趣夢天堂"
 category: ["看板創意", "話題行銷"]
 period: "2023.07"
-role: "文案發想、贈品 IP 設計、執行"
+role: "專案統籌、視覺方向、文案發想、贈品與活動規劃、跨部門協調、延伸應用"
 featured: false
 order: 31
 coverImage: "/images/works/billboard-creative/ghost-month-talisman.jpg"

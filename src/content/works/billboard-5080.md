@@ -3,7 +3,7 @@ title: "以為是顯卡廣告！<br>用科技時事營造「街頭誤認」"
 client: "情趣夢天堂"
 category: ["看板創意", "話題行銷"]
 period: "2025.02"
-role: "創意發想、文案、執行"
+role: "視覺方向、文案發想、商品策略規劃、跨部門協調、媒體受訪"
 featured: false
 order: 30
 coverImage: "/images/works/billboard-creative/5080-nvidia.jpg"

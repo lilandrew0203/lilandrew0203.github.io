@@ -3,7 +3,7 @@ title: "色色也能救浪浪！？<br>撒狗糧公益企劃"
 client: "情趣夢天堂 × ARTT"
 category: ["公益促銷", "話題行銷"]
 period: "2024.05 – 2024.06"
-role: "策略規劃、活動設計、執行、廠商聯繫"
+role: "專案統籌、活動規劃、視覺方向、公益開發、資源整合、落地執行"
 featured: false
 order: 6
 coverImage: "/images/works/single-dogs-food/cover.jpg"

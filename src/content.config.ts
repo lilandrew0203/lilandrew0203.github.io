@@ -23,6 +23,8 @@ const works = defineCollection({
       )
       .default([]),
     mediaLayout: z.enum(["default", "featured-left"]).optional(),
+    mediaImageFit: z.enum(["cover", "contain"]).optional(),
+    mediaColumns: z.number().optional(),
     campaignMedia: z
       .array(
         z.object({

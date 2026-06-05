@@ -2,7 +2,7 @@
 title: "Vtuber 分潤合作機制"
 client: "情趣夢天堂"
 category: ["Vtuber 合作"]
-period: "2022 – Present"
+period: "2022 – 2026.05"
 role: "合作機制設計、開發洽談、成效追蹤"
 featured: false
 order: 5
@@ -11,32 +11,24 @@ summary: "針對台灣 Vtuber 圈建立標準化分潤合作機制，累積 60+ 
 kpis:
   - label: "聯名商品營收"
     value: "400萬+"
-  - label: "Vtuber 深度合作"
+  - label: "Vtuber合作對象"
     value: "60+"
 tools: []
 partners: ["庫洛姆", "塔芭絲可", "嗨咖", "黃小艾", "嘿嘿啾芮"]
+mediaColumns: 3
 media:
   - type: image
-    src: "/images/works/influencer-collab/kuromu-product.webp"
-    caption: "庫洛姆聯名商品（單案最高 400 萬+ 營收）"
-  - type: image
     src: "/images/works/influencer-collab/kuromu-1.jpg"
-    caption: "庫洛姆合作素材 (1)"
   - type: image
     src: "/images/works/influencer-collab/kuromu-2.jpg"
-    caption: "庫洛姆合作素材 (2)"
   - type: image
-    src: "/images/works/influencer-collab/tabasco-product.jpg"
-    caption: "塔芭絲可聯名商品外盒"
+    src: "/images/works/influencer-collab/kuromu-product.webp"
   - type: image
     src: "/images/works/influencer-collab/tabasco.jpg"
-    caption: "塔芭絲可合作素材 (1)"
   - type: image
     src: "/images/works/influencer-collab/tabasco-2.jpg"
-    caption: "塔芭絲可合作素材 (2)"
   - type: image
-    src: "/images/works/influencer-collab/heyhey-jurry.jpg"
-    caption: "嘿嘿啾芮合作"
+    src: "/images/works/influencer-collab/tabasco-product.jpg"
 ---
 
 ## Vtuber 分潤合作 60+ 位
@@ -53,4 +45,4 @@ media:
 
 - 累積 **60+ 位 Vtuber** 合作
 - 最高單案聯名商品累積 **400 萬+ 營收**，並延伸為長期合作關係
-- 因合作成效與圈內擴散，逐漸形成**「情趣用品界 Surfshark」**之創作者圈口碑
+- 因合作成效與圈內擴散，逐漸形成「情趣用品界 Surfshark」之創作者圈口碑

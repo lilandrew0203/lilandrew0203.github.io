@@ -3,7 +3,7 @@ title: "靈感降落！<br>把熱門網路話題搬上實體看板"
 client: "情趣夢天堂"
 category: ["看板創意", "話題行銷"]
 period: "2024.04"
-role: "創意發想、文案"
+role: "視覺方向、文案發想、跨部門協調、話題操作"
 featured: false
 order: 32
 coverImage: "/images/works/billboard-creative/goddess-billboard.jpg"
@@ -14,7 +14,7 @@ kpis:
   - label: "原創作者分享"
     value: "主動轉發"
   - label: "自然流量"
-    value: "多位 KOL 自發分享"
+    value: "KOL自發分享"
 tools: []
 partners: ["Yahoo!新聞"]
 media:
@@ -34,4 +34,4 @@ media:
 ## 成果回顧
 
 - [Yahoo!新聞｜情趣用品店出手！九天玄女招牌太狂](https://reurl.cc/lpn43Q)
-- **原梗創作者本人主動在社群分享**，多位 KOL 跟進轉發，達成跨圈層有機擴散
+- 原梗創作者本人主動在社群轉發，[多位KOL主動分享討論](https://www.facebook.com/photo/?fbid=536749861148511&set=a.271261064364060)，達成話題自然擴散
