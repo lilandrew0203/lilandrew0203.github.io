@@ -1,44 +1,34 @@
 ---
-title: "宇宙比屌大賽：把產品變成年度社群事件"
+title: "愚人節創意競賽企劃"
 client: "DP TOYS"
 category: ["社群經營", "整合行銷"]
 period: "2023.10 – 2023.12"
-role: "策略規劃、活動企劃、社群操盤"
+role: "活動發想、專案統籌、視覺設計、社群操作、文案撰寫、獎項規劃與執行"
 featured: true
 order: 1
 coverImage: "/images/works/cosmic-contest/cover.jpg"
 summary: "用一年一次的儀式感把產品轉成社群事件，創造 #宇宙比屌大賽 自發討論超過 1.2 萬則。"
 kpis:
-  - label: "活動報名"
-    value: "4,820"
-    growth: "+580%"
-  - label: "社群討論"
-    value: "1.2萬則"
-    growth: "+340%"
-  - label: "EC 轉換率"
-    value: "3.4%"
-  - label: "活動 ROI"
-    value: "580%"
+  - label: "單日帶動官網流量"
+    value: "14萬+"
+  - label: "貼文自然觸及"
+    value: "24萬+"
+  - label: "貼文互動次數"
+    value: "9.2萬+"
 tools: ["Meta Ads", "Google Ads", "Shopify", "Looker Studio", "Notion"]
 partners: ["Dcard", "Threads Taiwan", "PopDaily"]
-media: []
+media:
+  - type: image
+    src: "/images/works/cosmic-contest/cosmic-contest-spread.jpg"
 ---
 
-## 背景與挑戰
+## 企劃核心
 
-成人品類的廣告投放天花板極低，平台限制嚴重。我們需要在 *不能直接投廣告* 的前提下，把產品變成「人們主動討論」的話題。
-
-## 執行策略
-
-- **建立年度儀式**：把活動設計成「一年一度」的時間錨點，讓消費者形成期待
-- **去廣告化內容**：把產品包進「比賽」、「投票」、「梗圖」三種低戒心格式
-- **平台分工**：Dcard 醞釀討論、Threads 引爆即時對話、IG 收斂視覺品牌印象
-- **EC 串接**：報名頁面同時做 email 收集，建立後續再行銷池
+以愚人節為切入點，將原本荒謬的玩笑概念設計成可實際參與的社群活動，從視覺設計、活動規則、獎品規劃、社群文案到結果公布內容皆由本人獨立規劃執行，活動成本約 4,500 元，最終創造 24 萬+自然觸及、9.2 萬+互動，比賽結果公布當日官網流量突破14萬+。
 
 ## 成果回顧
 
-- 報名人數較前一年成長 +580%，年度貢獻營收佔比 18%
-- 社群自發討論串超過 1.2 萬則，#宇宙比屌大賽 進入 Dcard 即時熱門
-- 後續 EDM 名單擴增 23,000+，後 90 天 LTV 提升 41%
-
-> 一個「不能投廣告」的品類，反而逼我們把每一段內容都當成「會不會被自然轉發」來設計——這是這個案子最有價值的訓練。
+- 單篇貼文觸及較粉專平均<span style="color: var(--color-accent);">成長 8,094%</span>，並成為當期表現最佳貼文
+- 貼文累積 <span style="color: var(--color-accent);">6,000+ 則留言</span>與 <span style="color: var(--color-accent);">1,000+ 次分享</span>，成功引發大量自發性參與及社群討論
+- 結果公布文章帶動官網單日流量突破 14萬+，<span style="color: var(--color-accent);">為過往平均日流量之 28 倍</span>
+- 以低成本創造 <span style="color: var(--color-accent);">24 萬+自然觸及</span>與 <span style="color: var(--color-accent);">9.2 萬+互動</span>，成為品牌代表性愚人節企劃之一
