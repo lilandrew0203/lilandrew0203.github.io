@@ -9,12 +9,12 @@ order: 1
 coverImage: "/images/works/cosmic-contest/cover.jpg"
 summary: "用一年一次的儀式感把產品轉成社群事件，創造 #宇宙比屌大賽 自發討論超過 1.2 萬則。"
 kpis:
-  - label: "單日帶動官網流量"
-    value: "14萬+"
   - label: "貼文自然觸及"
     value: "24萬+"
   - label: "貼文互動次數"
     value: "9.2萬+"
+  - label: "當日官網流量"
+    value: "14萬+"
 tools: ["Meta Ads", "Google Ads", "Shopify", "Looker Studio", "Notion"]
 partners: ["Dcard", "Threads Taiwan", "PopDaily"]
 media:

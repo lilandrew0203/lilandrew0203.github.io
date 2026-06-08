@@ -33,7 +33,14 @@ const cardKpiOverrides: Record<string, string> = {
   "billboard-5080": "國內外熱議擴散",
 };
 
-let kpiText = cardKpiOverrides[slug] ?? primaryKpi?.value ?? "";
+const cardKpiLabelOverrides: Record<string, string> = {
+  "cosmic-contest": "單日帶動官網流量",
+};
+const cardKpiValueOverrides: Record<string, string> = {
+  "cosmic-contest": "14萬+",
+};
+
+let kpiText = cardKpiValueOverrides[slug] ?? cardKpiOverrides[slug] ?? primaryKpi?.value ?? "";
 if (isBillboardSection && isCategoryA && primaryKpi) {
   kpiText = `${primaryKpi.label} ${primaryKpi.value}`;
 }
@@ -90,7 +97,7 @@ const coverPosition = coverPositions[slug] || "center";
           <div>
             {!hideKpiLabel && (
               <div class="text-[10px] uppercase tracking-[0.3em] text-[var(--color-subtle)]">
-                {primaryKpi.label}
+                {cardKpiLabelOverrides[slug] ?? primaryKpi.label}
               </div>
             )}
             <div
