@@ -7,7 +7,7 @@ role: "視覺方向、文案發想、跨部門協調、話題操作"
 featured: false
 order: 32
 coverImage: "/images/works/billboard-creative/goddess-billboard.jpg"
-summary: "把當時社群熱議的九天玄女梗轉化為實體看板，獲主流媒體報導，並由原梗創作者本人主動分享，達成跨圈層擴散。"
+summary: "結合當時高討論度網紅「九天玄女降落」話題，利用雙看板高低差製造「800英尺」、「100英尺」創意構圖，透過高辨識度的即時話題操作，引發社群拍攝、原作者轉發與媒體擴散。"
 kpis:
   - label: "新聞流量"
     value: "主流媒體報導"
