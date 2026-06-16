@@ -43,6 +43,7 @@ const works = defineCollection({
           src: z.string(),
           caption: z.string().optional(),
           fit: z.enum(["cover", "contain", "original"]).optional(),
+          url: z.string().optional(),
         }),
       )
       .default([]),

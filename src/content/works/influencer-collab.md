@@ -19,12 +19,20 @@ mediaImageFit: contain
 media:
   - type: image
     src: "/images/works/influencer-collab/artt.jpg"
+    caption: "反正我很閒"
+    url: "https://www.youtube.com/watch?v=IHTF4vX9d6g"
   - type: image
     src: "/images/works/influencer-collab/hica.jpg"
+    caption: "High咖-邱志恒"
+    url: "https://www.youtube.com/watch?v=hNAJ4aVvyFs&t"
   - type: image
     src: "/images/works/influencer-collab/huang-xiao-ai.jpg"
+    caption: "黃小愛"
+    url: "https://www.youtube.com/watch?v=YxXdP0Y_6kU&t"
   - type: image
     src: "/images/works/influencer-collab/heyhey-jurry-new.jpg"
+    caption: "嘿嘿啾芮"
+    url: "https://www.youtube.com/watch?v=aLOsGIavZ58"
 ---
 
 ## 合作超過 200+ 創作者

@@ -17,9 +17,12 @@ kpis:
     value: "14萬+"
 tools: ["Meta Ads", "Google Ads", "Shopify", "Looker Studio", "Notion"]
 partners: ["Dcard", "Threads Taiwan", "PopDaily"]
+mediaColumns: 1
 media:
   - type: image
     src: "/images/works/cosmic-contest/cosmic-contest-spread.jpg"
+  - type: image
+    src: "/images/works/cosmic-contest/cosmic-contest-insights.jpg"
 ---
 
 ## 企劃核心
