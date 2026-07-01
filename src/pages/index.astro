@@ -28,7 +28,12 @@ const subsections = (mainJob.subsections ?? []) as {
     <h1 class="h-display mt-6 fade-up fade-up-2">
       嗨, 我是<span style="color: var(--color-accent);">{profile.name}</span>！<br
       />
-      <span class="text-[var(--color-muted)]">要錄取我的公司有福了。</span>
+      <span
+        id="hero-tagline"
+        class="text-[var(--color-muted)] cursor-default transition-all duration-200"
+        data-default="用人性賦予創意更多可能。"
+        data-hover="錄取我的公司有福了。"
+      >用人性賦予創意更多可能。</span>
     </h1>
 
     <p
@@ -242,5 +247,11 @@ const subsections = (mainJob.subsections ?? []) as {
 
   <script>
     import "../scripts/countup.ts";
+
+    const el = document.getElementById("hero-tagline");
+    if (el) {
+      el.addEventListener("mouseenter", () => { el.textContent = el.dataset.hover!; });
+      el.addEventListener("mouseleave", () => { el.textContent = el.dataset.default!; });
+    }
   </script>
 </BaseLayout>
