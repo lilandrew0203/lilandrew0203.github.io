@@ -31,7 +31,13 @@ media:
     src: "/images/works/billboard-creative/ghost-month-giveaway.jpg"
     caption: "贈品-符咒貼紙"
 mediaLayout: featured-left
-campaignMedia: []
+campaignMedia:
+  - type: image
+    src: "/images/works/billboard-ghost-month/dark-homework-1.jpg"
+  - type: image
+    src: "/images/works/billboard-ghost-month/dark-homework-2.jpg"
+  - type: image
+    src: "/images/works/billboard-ghost-month/event-extension.jpg"
 ---
 
 ## 企劃核心

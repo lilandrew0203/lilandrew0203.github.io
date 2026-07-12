@@ -207,7 +207,7 @@ const kpis = data.kpis;
       <section class="mx-auto max-w-6xl px-5 py-8 sm:px-8">
         <span class="eyebrow">Campaign Extension</span>
         {data.campaignMedia.length > 0 && (
-          <div class="mt-8 grid gap-6 md:grid-cols-2">
+          <div class={`mt-8 grid gap-4 ${data.campaignMedia.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
             {data.campaignMedia.map((m) =>
               m.type === "youtube" ? (
                 <figure>
@@ -235,7 +235,8 @@ const kpis = data.kpis;
                   <img
                     src={m.src}
                     alt={m.caption ?? ""}
-                    class="w-full rounded-2xl border border-[var(--color-line)]"
+                    class="lightbox-trigger cursor-zoom-in w-full rounded-2xl border border-[var(--color-line)]"
+                    data-src={m.src}
                   />
                   {m.caption && (
                     <figcaption class="mt-3 text-sm text-[var(--color-muted)]">
