@@ -18,14 +18,14 @@
   ],
   "keyResults": [
     { "label": "社群導購累積營收", "value": "200 萬+", "note": "無廣告投放" },
-    { "label": "網紅合作專案", "value": "單案百萬，累積 400 萬+" },
+    { "label": "累積合作對象", "value": "250 位+" },
     { "label": "實體活動營運", "value": "持續 4 年穩定運作" },
     { "label": "長期合作營收", "value": "每月穩定 40 萬+" },
     { "label": "品牌曝光", "value": "媒體報導 / 海內外社群擴散" }
   ],
   "stats": [
     { "label": "年資", "value": "5+", "suffix": "yrs" },
-    { "label": "合作創作者", "value": "200+", "suffix": "" },
+    { "label": "合作創作者", "value": "250+", "suffix": "位" },
     { "label": "單案合作營收", "value": "400", "suffix": "萬+" },
     { "label": "月均合作營收", "value": "40", "suffix": "萬+" }
   ],

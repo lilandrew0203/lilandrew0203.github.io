@@ -86,13 +86,16 @@ const kpis = data.kpis;
       <section class="mx-auto max-w-6xl px-5 py-8 sm:px-8">
         <span class="eyebrow">Media</span>
         {data.mediaLayout === "featured-left" ? (
-          <div class="mt-8 grid gap-6 md:grid-cols-2">
+          <div class="mt-8 grid md:grid-cols-2" style="gap: 0.75rem 0.375rem; max-width: 90%; margin: 2rem auto 0;">
             {/* Left: first item spanning full height */}
             <figure class={data.media.length >= 4 ? "md:row-span-3" : "md:row-span-2"}>
               <img
                 src={data.media[0].src}
                 alt={data.media[0].caption ?? ""}
-                class="h-full w-full rounded-2xl border border-[var(--color-line)] object-cover"
+                class={`lightbox-trigger cursor-zoom-in rounded-2xl ${data.media[0].fit === "contain" ? "object-contain" : "w-full h-full border border-[var(--color-line)] object-cover"}`}
+                style={data.media[0].fit === "contain" ? "height: 588px; display: block; margin: 0 auto;" : ""}
+                data-src={data.media[0].src}
+                data-url=""
               />
               {data.media[0].caption && (
                 <figcaption class="mt-3 text-sm text-[var(--color-muted)]">
@@ -128,7 +131,10 @@ const kpis = data.kpis;
                   <img
                     src={m.src}
                     alt={m.caption ?? ""}
-                    class="w-full rounded-2xl border border-[var(--color-line)]"
+                    class="lightbox-trigger cursor-zoom-in w-full rounded-2xl border border-[var(--color-line)] object-cover"
+                    style="height: 286px;"
+                    data-src={m.src}
+                    data-url=""
                   />
                   {m.caption && (
                     <figcaption class="mt-3 text-sm text-[var(--color-muted)]">
@@ -165,24 +171,14 @@ const kpis = data.kpis;
                 </figure>
               ) : (
                 <figure class={m.fit === "original" ? "overflow-visible" : ""}>
-                  {m.url ? (
-                    <a href={m.url} target="_blank" rel="noreferrer" class="block">
-                      <img
-                        src={m.src}
-                        alt={m.caption ?? ""}
-                        class="rounded-2xl border border-[var(--color-line)] transition-opacity hover:opacity-80"
-                        style={m.fit === "original" ? "display: block; width: auto; zoom: 2; max-width: none;" : m.fit === "contain" || data.mediaImageFit === "contain" ? `display: block; width: ${data.mediaColumns === 1 ? "72%" : "80%"}; margin: 0 auto; object-fit: contain;` : data.mediaColumns === 1 ? "display: block; width: 90%; margin: 0 auto;" : "width: 100%;"}
-                      />
-                    </a>
-                  ) : (
-                    <img
-                      src={m.src}
-                      alt={m.caption ?? ""}
-                      class="lightbox-trigger cursor-zoom-in rounded-2xl border border-[var(--color-line)]"
-                      style={m.fit === "original" ? "display: block; width: auto; zoom: 2; max-width: none;" : m.fit === "contain" || data.mediaImageFit === "contain" ? `display: block; width: ${data.mediaColumns === 1 ? "72%" : "80%"}; margin: 0 auto; object-fit: contain;` : data.mediaColumns === 1 ? "display: block; width: 90%; margin: 0 auto;" : "width: 100%;"}
-                      data-src={m.src}
-                    />
-                  )}
+                  <img
+                    src={m.src}
+                    alt={m.caption ?? ""}
+                    class="lightbox-trigger cursor-zoom-in rounded-2xl border border-[var(--color-line)]"
+                    style={m.fit === "original" ? "display: block; width: auto; zoom: 2; max-width: none;" : m.fit === "contain" || data.mediaImageFit === "contain" ? `display: block; width: ${data.mediaColumns === 1 ? "72%" : "80%"}; margin: 0 auto; object-fit: contain;` : data.mediaColumns === 1 ? "display: block; width: 90%; margin: 0 auto;" : "width: 100%;"}
+                    data-src={m.src}
+                    data-url={m.url ?? ""}
+                  />
                   {m.caption && (
                     <figcaption class="mt-3 text-sm text-[var(--color-muted)]">
                       {m.url ? (
@@ -258,6 +254,7 @@ const kpis = data.kpis;
   <div id="slug-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4" role="dialog" aria-modal="true">
     <button id="slug-lightbox-close" class="absolute right-5 top-5 text-3xl text-white opacity-70 hover:opacity-100" aria-label="關閉">✕</button>
     <img id="slug-lightbox-img" src="" alt="" class="max-h-[90vh] max-w-[90vw] rounded-xl object-contain" />
+    <a id="slug-lightbox-link" href="" target="_blank" rel="noreferrer" class="absolute bottom-6 hidden rounded-full border border-white/40 px-4 py-2 text-sm text-white hover:border-white">前往連結 ↗</a>
   </div>
 
   <script>
@@ -266,11 +263,15 @@ const kpis = data.kpis;
     const lb = document.getElementById("slug-lightbox")!;
     const lbImg = document.getElementById("slug-lightbox-img") as HTMLImageElement;
     const lbClose = document.getElementById("slug-lightbox-close")!;
+    const lbLink = document.getElementById("slug-lightbox-link") as HTMLAnchorElement;
 
     document.querySelectorAll<HTMLImageElement>(".lightbox-trigger").forEach((img) => {
       img.addEventListener("click", () => {
         lbImg.src = img.dataset.src ?? img.src;
         lbImg.alt = img.alt;
+        const url = img.dataset.url ?? "";
+        if (url) { lbLink.href = url; lbLink.classList.remove("hidden"); }
+        else { lbLink.classList.add("hidden"); }
         lb.classList.remove("hidden");
         lb.classList.add("flex");
       });
@@ -280,6 +281,7 @@ const kpis = data.kpis;
       lb.classList.add("hidden");
       lb.classList.remove("flex");
       lbImg.src = "";
+      lbLink.classList.add("hidden");
     }
 
     lbClose.addEventListener("click", closeLb);
