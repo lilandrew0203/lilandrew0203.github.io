@@ -25,12 +25,14 @@ const works = defineCollection({
     mediaLayout: z.enum(["default", "featured-left"]).optional(),
     mediaImageFit: z.enum(["cover", "contain"]).optional(),
     mediaColumns: z.number().optional(),
+    campaignMediaLayout: z.enum(["default", "featured-left"]).optional(),
     campaignMedia: z
       .array(
         z.object({
           type: z.enum(["image", "youtube"]),
           src: z.string(),
           caption: z.string().optional(),
+          fit: z.enum(["cover", "contain", "original"]).optional(),
         }),
       )
       .optional(),

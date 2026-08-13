@@ -40,3 +40,8 @@ media: []
 <div style="margin-top: 3em;"></div>
 
 <span style="font-size: 1.15em; font-weight: 700; color: var(--color-accent);">同志遊行</span>｜依活動族群規劃攤位展示與互動內容，透過品牌體驗與現場交流，提升品牌認同與新客接觸。
+
+<div style="display: flex; gap: 0.75rem; margin-top: 1rem;">
+  <img src="/images/works/event-exhibition/pride-1.png" style="height: 320px; width: auto; border-radius: 0.75rem; flex-shrink: 0;" />
+  <img src="/images/works/event-exhibition/pride-2.jpg" style="height: 320px; width: auto; border-radius: 0.75rem; flex-shrink: 0;" />
+</div>

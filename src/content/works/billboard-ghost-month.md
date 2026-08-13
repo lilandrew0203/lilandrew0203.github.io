@@ -31,9 +31,11 @@ media:
     src: "/images/works/billboard-creative/ghost-month-giveaway.jpg"
     caption: "贈品-符咒貼紙"
 mediaLayout: featured-left
+campaignMediaLayout: featured-left
 campaignMedia:
   - type: image
-    src: "/images/works/billboard-ghost-month/dark-homework-1.jpg"
+    src: "/images/works/billboard-ghost-month/event-venue.jpg"
+    fit: contain
   - type: image
     src: "/images/works/billboard-ghost-month/dark-homework-2.jpg"
   - type: image
@@ -42,7 +44,7 @@ campaignMedia:
 
 ## 企劃核心
 
-主導鬼月系列企劃發想，規劃大型符咒看板，透過諧音梗、民俗元素與誇張視覺呈現，同時<span style="color: var(--color-accent);">結合促銷活動曝光，延伸發想創意周邊贈品，並負責文案、廠商溝通與延伸使用</span>，成功提升社群討論度與品牌記憶點。
+主導鬼月系列企劃發想，規劃大型符咒看板，透過諧音梗、民俗元素與誇張視覺呈現，同時<span style="color: var(--color-accent);">結合促銷活動</span>曝光，延伸發想<span style="color: var(--color-accent);">創意周邊贈品</span>，並<span style="color: var(--color-accent);">負責文案、廠商溝通與延伸使用</span>，成功提升社群討論度與品牌記憶點。
 
 ## 成果回顧
 

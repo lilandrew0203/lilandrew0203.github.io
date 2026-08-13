@@ -86,14 +86,14 @@ const kpis = data.kpis;
       <section class="mx-auto max-w-6xl px-5 py-8 sm:px-8">
         <span class="eyebrow">Media</span>
         {data.mediaLayout === "featured-left" ? (
-          <div class="mt-8 grid md:grid-cols-2" style="gap: 0.75rem 0.375rem; max-width: 90%; margin: 2rem auto 0;">
+          <div class="mt-8 grid md:grid-cols-2" style="gap: 0.75rem 1.5rem; max-width: 90%; margin: 2rem auto 0;">
             {/* Left: first item spanning full height */}
             <figure class={data.media.length >= 4 ? "md:row-span-3" : "md:row-span-2"}>
               <img
                 src={data.media[0].src}
                 alt={data.media[0].caption ?? ""}
                 class={`lightbox-trigger cursor-zoom-in rounded-2xl ${data.media[0].fit === "contain" ? "object-contain" : "w-full h-full border border-[var(--color-line)] object-cover"}`}
-                style={data.media[0].fit === "contain" ? "height: 588px; display: block; margin: 0 auto;" : ""}
+                style={data.media[0].fit === "contain" ? "height: 584px; display: block; margin: 0 auto;" : ""}
                 data-src={data.media[0].src}
                 data-url=""
               />
@@ -171,14 +171,25 @@ const kpis = data.kpis;
                 </figure>
               ) : (
                 <figure class={m.fit === "original" ? "overflow-visible" : ""}>
-                  <img
-                    src={m.src}
-                    alt={m.caption ?? ""}
-                    class="lightbox-trigger cursor-zoom-in rounded-2xl border border-[var(--color-line)]"
-                    style={m.fit === "original" ? "display: block; width: auto; zoom: 2; max-width: none;" : m.fit === "contain" || data.mediaImageFit === "contain" ? `display: block; width: ${data.mediaColumns === 1 ? "72%" : "80%"}; margin: 0 auto; object-fit: contain;` : data.mediaColumns === 1 ? "display: block; width: 90%; margin: 0 auto;" : "width: 100%;"}
-                    data-src={m.src}
-                    data-url={m.url ?? ""}
-                  />
+                  {m.url ? (
+                    <a href={m.url} target="_blank" rel="noreferrer" class="block">
+                      <img
+                        src={m.src}
+                        alt={m.caption ?? ""}
+                        class="cursor-pointer rounded-2xl border border-[var(--color-line)] transition-opacity hover:opacity-80"
+                        style={m.fit === "original" ? "display: block; width: auto; zoom: 2; max-width: none;" : m.fit === "contain" || data.mediaImageFit === "contain" ? `display: block; width: ${data.mediaColumns === 1 ? "72%" : "80%"}; margin: 0 auto; object-fit: contain;` : data.mediaColumns === 1 ? "display: block; width: 90%; margin: 0 auto;" : "width: 100%;"}
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={m.src}
+                      alt={m.caption ?? ""}
+                      class="lightbox-trigger cursor-zoom-in rounded-2xl border border-[var(--color-line)]"
+                      style={m.fit === "original" ? "display: block; width: auto; zoom: 2; max-width: none;" : m.fit === "contain" || data.mediaImageFit === "contain" ? `display: block; width: ${data.mediaColumns === 1 ? "72%" : "80%"}; margin: 0 auto; object-fit: contain;` : data.mediaColumns === 1 ? "display: block; width: 90%; margin: 0 auto;" : "width: 100%;"}
+                      data-src={m.src}
+                      data-url=""
+                    />
+                  )}
                   {m.caption && (
                     <figcaption class="mt-3 text-sm text-[var(--color-muted)]">
                       {m.url ? (
@@ -203,46 +214,73 @@ const kpis = data.kpis;
       <section class="mx-auto max-w-6xl px-5 py-8 sm:px-8">
         <span class="eyebrow">Campaign Extension</span>
         {data.campaignMedia.length > 0 && (
-          <div class={`mt-8 grid gap-4 ${data.campaignMedia.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
-            {data.campaignMedia.map((m) =>
-              m.type === "youtube" ? (
-                <figure>
-                  <div
-                    class="overflow-hidden rounded-2xl border border-[var(--color-line)] bg-black"
-                    style="aspect-ratio: 16 / 9;"
-                  >
-                    <iframe
-                      src={m.src}
-                      class="h-full w-full"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                      title={m.caption ?? "video"}
-                    />
-                  </div>
-                  {m.caption && (
-                    <figcaption class="mt-3 text-sm text-[var(--color-muted)]">
-                      {m.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              ) : (
+          data.campaignMediaLayout === "featured-left" ? (
+            <div class="mt-8 grid gap-3 md:grid-cols-2" style="margin: 2rem auto 0;">
+              <figure class={data.campaignMedia.length >= 3 ? "md:row-span-2" : ""}>
+                <img
+                  src={data.campaignMedia[0].src}
+                  alt={data.campaignMedia[0].caption ?? ""}
+                  class={`lightbox-trigger cursor-zoom-in rounded-2xl ${data.campaignMedia[0].fit === "contain" ? "object-contain" : "w-full h-full border border-[var(--color-line)] object-cover"}`}
+                  style={data.campaignMedia[0].fit === "contain" ? "height: 452px; display: block; margin: 0 auto;" : ""}
+                  data-src={data.campaignMedia[0].src}
+                  data-url=""
+                />
+              </figure>
+              {data.campaignMedia.slice(1).map((m) => (
                 <figure>
                   <img
                     src={m.src}
                     alt={m.caption ?? ""}
-                    class="lightbox-trigger cursor-zoom-in w-full rounded-2xl border border-[var(--color-line)]"
+                    class="lightbox-trigger cursor-zoom-in w-full rounded-2xl border border-[var(--color-line)] object-cover"
+                    style="height: 210px;"
                     data-src={m.src}
+                    data-url=""
                   />
-                  {m.caption && (
-                    <figcaption class="mt-3 text-sm text-[var(--color-muted)]">
-                      {m.caption}
-                    </figcaption>
-                  )}
                 </figure>
-              )
-            )}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div class={`mt-8 grid gap-4 ${data.campaignMedia.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
+              {data.campaignMedia.map((m) =>
+                m.type === "youtube" ? (
+                  <figure>
+                    <div
+                      class="overflow-hidden rounded-2xl border border-[var(--color-line)] bg-black"
+                      style="aspect-ratio: 16 / 9;"
+                    >
+                      <iframe
+                        src={m.src}
+                        class="h-full w-full"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        title={m.caption ?? "video"}
+                      />
+                    </div>
+                    {m.caption && (
+                      <figcaption class="mt-3 text-sm text-[var(--color-muted)]">
+                        {m.caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                ) : (
+                  <figure>
+                    <img
+                      src={m.src}
+                      alt={m.caption ?? ""}
+                      class="lightbox-trigger cursor-zoom-in w-full rounded-2xl border border-[var(--color-line)]"
+                      data-src={m.src}
+                    />
+                    {m.caption && (
+                      <figcaption class="mt-3 text-sm text-[var(--color-muted)]">
+                        {m.caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                )
+              )}
+            </div>
+          )
         )}
       </section>
     )
