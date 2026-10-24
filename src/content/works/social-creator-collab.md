@@ -6,7 +6,7 @@ period: "2024"
 role: "話題洞察、活動發想、專案統籌、視覺設計、社群操作、文案撰寫、獎項規劃與執行、創作者關係維護、粉絲導流"
 featured: false
 order: 9
-coverImage: ""
+coverImage: "/images/works/social-creator-collab/cover.jpg"
 summary: "觀察繪師圈自發討論後舉辦「通靈王大賽」，邀請繪師自由創作，將社群自發行為轉化為品牌互動企劃，吸引 25+ 位創作者參與。"
 kpis:
   - label: "單篇貼文瀏覽"

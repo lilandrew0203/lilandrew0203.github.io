@@ -9,6 +9,16 @@ const works = defineCollection({
     category: z.array(z.string()),
     period: z.string(),
     role: z.string(),
+    hideDetailMeta: z.boolean().optional(),
+    videoShowcase: z
+      .array(
+        z.object({
+          title: z.string(),
+          desc: z.string(),
+          url: z.string(),
+        }),
+      )
+      .optional(),
     featured: z.boolean().default(false),
     order: z.number().optional(),
     coverImage: z.string().optional(),

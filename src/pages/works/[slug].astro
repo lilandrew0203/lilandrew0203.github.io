@@ -35,21 +35,23 @@ const kpis = data.kpis;
 
     <h1 class="h-display mt-6" set:html={data.title} />
 
-    <div
-      class="mt-6 grid gap-6 border-t border-[var(--color-line)] pt-6 md:grid-cols-4"
-    >
-      <div class="md:col-span-4">
-        <div class="text-[10px] uppercase tracking-[0.3em] text-[var(--color-subtle)]">
-          我的角色
+    {!data.hideDetailMeta && (
+      <div
+        class="mt-6 grid gap-6 border-t border-[var(--color-line)] pt-6 md:grid-cols-4"
+      >
+        <div class="md:col-span-4">
+          <div class="text-[10px] uppercase tracking-[0.3em] text-[var(--color-subtle)]">
+            我的角色
+          </div>
+          <div class="mt-2 font-medium">{data.role}</div>
         </div>
-        <div class="mt-2 font-medium">{data.role}</div>
       </div>
-    </div>
+    )}
   </section>
 
   <!-- ============ KPI BENTO ============ -->
   {
-    kpis.length > 0 && (
+    kpis.length > 0 && !data.hideDetailMeta && (
       <section class="mx-auto max-w-6xl px-5 pt-8 pb-4 sm:px-8">
         <span class="eyebrow">KPI 成果</span>
 
@@ -78,6 +80,48 @@ const kpis = data.kpis;
       <Content />
     </article>
   </section>
+
+  <!-- ============ VIDEO SHOWCASE ============ -->
+  {
+    data.videoShowcase && data.videoShowcase.length > 0 && (
+      <section class="mx-auto max-w-6xl px-5 py-8 sm:px-8">
+        <span class="eyebrow">創作者自發分享</span>
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          {data.videoShowcase.map((v) => {
+            const id =
+              v.url.match(/youtu\.be\/([^?&]+)/)?.[1] ??
+              v.url.match(/[?&]v=([^&]+)/)?.[1] ??
+              "";
+            const thumb = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+            return (
+              <a
+                href={v.url}
+                target="_blank"
+                rel="noreferrer"
+                class="flex flex-col overflow-hidden rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)] transition-colors hover:border-[var(--color-accent)]"
+              >
+                <div class="w-full overflow-hidden" style="aspect-ratio: 16 / 9;">
+                  <img
+                    src={thumb}
+                    alt={v.title}
+                    loading="lazy"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="flex flex-col p-4">
+                  <div class="font-bold text-[var(--color-fg)]">{v.title}</div>
+                  <p class="mt-1 text-sm text-[var(--color-muted)]">{v.desc}</p>
+                  <span class="mt-3 text-sm" style="color: var(--color-accent);">
+                    ↗ 觀看精彩片段
+                  </span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+    )
+  }
 
 
   <!-- ============ MEDIA ============ -->
